@@ -1027,7 +1027,25 @@ or any other device that supports the required display driver for the WidgetTree
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.widget_tree.WidgetTree.get_widget_with_alias">
 <span class="sig-name descname"><span class="pre">get_widget_with_alias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.widget_tree.WidgetTree.get_widget_with_alias" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>This function returns the widget with the given alias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>alias</strong> (<em>str</em>) – The alias of the widget.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The widget with the given alias.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cortic_aiot.sdk.ui.widget.Widget" title="cortic_aiot.sdk.ui.widget.Widget">Widget</a> or None</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_aiot</span> <span class="kn">import</span> <span class="n">WidgetTree</span>
+<span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">get_widget_with_alias</span><span class="p">(</span><span class="s2">&quot;my_widget&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.widget_tree.WidgetTree.build">
