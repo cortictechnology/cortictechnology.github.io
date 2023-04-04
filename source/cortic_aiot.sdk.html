@@ -55,6 +55,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#module-cortic_aiot.sdk.logging">cortic_aiot.sdk.logging module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#module-cortic_aiot.sdk.pipeline">cortic_aiot.sdk.pipeline module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#module-cortic_aiot.sdk.pipeline_states">cortic_aiot.sdk.pipeline_states module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#module-cortic_aiot.sdk.service">cortic_aiot.sdk.service module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#module-cortic_aiot.sdk.streaming_peer">cortic_aiot.sdk.streaming_peer module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#module-cortic_aiot.sdk.streaming_states">cortic_aiot.sdk.streaming_states module</a></li>
 </ul>
@@ -133,6 +134,8 @@
 <li class="toctree-l2"><a class="reference internal" href="cortic_aiot.sdk.ui.html#module-cortic_aiot.sdk.ui.input_widgets">cortic_aiot.sdk.ui.input_widgets module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField"><code class="docutils literal notranslate"><span class="pre">TextField</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField.__init__"><code class="docutils literal notranslate"><span class="pre">TextField.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField.set_data"><code class="docutils literal notranslate"><span class="pre">TextField.set_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField.toggle_obscure_text"><code class="docutils literal notranslate"><span class="pre">TextField.toggle_obscure_text()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.RadioButton"><code class="docutils literal notranslate"><span class="pre">RadioButton</span></code></a><ul>
@@ -141,10 +144,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.DropdownMenu"><code class="docutils literal notranslate"><span class="pre">DropdownMenu</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.__init__"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_selected_item"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.set_selected_item()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_data"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.set_data()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.PinPut"><code class="docutils literal notranslate"><span class="pre">PinPut</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.PinPut.__init__"><code class="docutils literal notranslate"><span class="pre">PinPut.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.PinPut.set_data"><code class="docutils literal notranslate"><span class="pre">PinPut.set_data()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.Slider"><code class="docutils literal notranslate"><span class="pre">Slider</span></code></a><ul>
@@ -220,7 +226,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="cortic_aiot.sdk.ui.html#module-cortic_aiot.sdk.ui">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -1084,6 +1089,85 @@ If a service is not needed by any other pipeline, it will be deactived.</p>
 <dt class="sig sig-object py" id="cortic_aiot.sdk.pipeline_states.PipelineNodeState.FailedToAssociate">
 <span class="sig-name descname"><span class="pre">FailedToAssociate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#cortic_aiot.sdk.pipeline_states.PipelineNodeState.FailedToAssociate" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-cortic_aiot.sdk.service">
+<span id="cortic-aiot-sdk-service-module"></span><h2>cortic_aiot.sdk.service module<a class="headerlink" href="#module-cortic_aiot.sdk.service" title="Permalink to this heading"></a></h2>
+<p>This module provides a base class for creating various types of services that 
+can be used in a Cortic AIoT (Artificial Intelligence of Things) App.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.service.Service">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.service.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><a class="headerlink" href="#cortic_aiot.sdk.service.Service" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Service class is a versatile foundation for developers to build custom services that can be that can be
+used in a Cortic AIoT (Artificial Intelligence of Things) App. To create a service, developers should
+implement the following methods, which represent key stages in the service lifecycle:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>activate: In this stage, the service should gather all required resources.</p></li>
+<li><p>process: This method contains the data processing logic for the service and is executed when new data arrives from an App or another Service.</p></li>
+<li><p>deactivate: During this stage, the service should release all previously acquired resources.</p></li>
+</ol>
+</div></blockquote>
+<p>A service is activated only when an App or another Service requires its output. It will be
+automatically deactivated once its output is no longer needed. By releasing resources during
+the deactivation process, the system ensures that resources are always available to the services
+that genuinely need them.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.service.Service.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.service.Service.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes a service</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.service.Service.activate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.service.Service.activate" title="Permalink to this definition"></a></dt>
+<dd><p>Abstract Method.
+Allocates and acquires any resources required by this service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NotImplementedError: If this method is not implemented.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.service.Service.process">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.service.Service.process" title="Permalink to this definition"></a></dt>
+<dd><p>Abstract Method.
+Processes the input data and produces an output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input_data</strong> (<em>dict</em>) – Contains the data that needs to be processed by this Service.
+The data are provided as &lt;key&gt;-&lt;value&gt; pairs, in which the &lt;key&gt;
+is the name of the data, and &lt;value&gt; is the value of this data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The output of this Service.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>NotImplementedError: If this method is not implemented.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.service.Service.deactivate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deactivate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.service.Service.deactivate" title="Permalink to this definition"></a></dt>
+<dd><p>Abstract Method.
+Releases any resources being allocated and obtained by this Service in
+the activate() method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NotImplementedError: If this method is not implemented.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

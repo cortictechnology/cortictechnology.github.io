@@ -102,6 +102,8 @@
 </li>
         <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.PipelineNode.__init__">(cortic_aiot.sdk.pipeline.PipelineNode method)</a>
 </li>
+        <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.service.Service.__init__">(cortic_aiot.sdk.service.Service method)</a>
+</li>
         <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.streaming_peer.StreamingPeer.__init__">(cortic_aiot.sdk.streaming_peer.StreamingPeer method)</a>
 </li>
         <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.streaming_peer.StreamingPeerConnection.__init__">(cortic_aiot.sdk.streaming_peer.StreamingPeerConnection method)</a>
@@ -161,16 +163,18 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.streaming_peer.StreamingPeer.accept_connection_requests">accept_connection_requests() (cortic_aiot.sdk.streaming_peer.StreamingPeer method)</a>
 </li>
+      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.service.Service.activate">activate() (cortic_aiot.sdk.service.Service method)</a>
+</li>
       <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.widget_tree.WidgetTree.add">add() (cortic_aiot.sdk.ui.widget_tree.WidgetTree method)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.add_input_port">add_input_port() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.add_node">add_node() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
 </li>
-      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.add_output_port">add_output_port() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.add_output_port">add_output_port() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
+</li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.app.App">App (class in cortic_aiot.sdk.app)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.app_events.AppActions">AppActions (class in cortic_aiot.sdk.app_events)</a>
@@ -267,6 +271,13 @@
 </li>
       </ul></li>
       <li>
+    cortic_aiot.sdk.service
+
+      <ul>
+        <li><a href="source/cortic_aiot.sdk.html#module-cortic_aiot.sdk.service">module</a>
+</li>
+      </ul></li>
+      <li>
     cortic_aiot.sdk.streaming_peer
 
       <ul>
@@ -278,13 +289,6 @@
 
       <ul>
         <li><a href="source/cortic_aiot.sdk.html#module-cortic_aiot.sdk.streaming_states">module</a>
-</li>
-      </ul></li>
-      <li>
-    cortic_aiot.sdk.ui
-
-      <ul>
-        <li><a href="source/cortic_aiot.sdk.ui.html#module-cortic_aiot.sdk.ui">module</a>
 </li>
       </ul></li>
       <li>
@@ -343,9 +347,11 @@
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.data_producer.DataProducer">DataProducer (class in cortic_aiot.sdk.data_producer)</a>
 </li>
+      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.data_producer.DataProducerMeta">DataProducerMeta (class in cortic_aiot.sdk.data_producer)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.data_producer.DataProducerMeta">DataProducerMeta (class in cortic_aiot.sdk.data_producer)</a>
+      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.service.Service.deactivate">deactivate() (cortic_aiot.sdk.service.Service method)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.streaming_states.StreamingPeerConnectionState.Disconnected">Disconnected (cortic_aiot.sdk.streaming_states.StreamingPeerConnectionState attribute)</a>
 </li>
@@ -469,11 +475,11 @@
 </li>
         <li><a href="source/cortic_aiot.sdk.html#module-cortic_aiot.sdk.pipeline_states">cortic_aiot.sdk.pipeline_states</a>
 </li>
+        <li><a href="source/cortic_aiot.sdk.html#module-cortic_aiot.sdk.service">cortic_aiot.sdk.service</a>
+</li>
         <li><a href="source/cortic_aiot.sdk.html#module-cortic_aiot.sdk.streaming_peer">cortic_aiot.sdk.streaming_peer</a>
 </li>
         <li><a href="source/cortic_aiot.sdk.html#module-cortic_aiot.sdk.streaming_states">cortic_aiot.sdk.streaming_states</a>
-</li>
-        <li><a href="source/cortic_aiot.sdk.ui.html#module-cortic_aiot.sdk.ui">cortic_aiot.sdk.ui</a>
 </li>
         <li><a href="source/cortic_aiot.sdk.ui.html#module-cortic_aiot.sdk.ui.basic_widgets">cortic_aiot.sdk.ui.basic_widgets</a>
 </li>
@@ -547,7 +553,11 @@
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline_states.PipelineState">PipelineState (class in cortic_aiot.sdk.pipeline_states)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.app.App.process">process() (cortic_aiot.sdk.app.App method)</a>
+
+      <ul>
+        <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.service.Service.process">(cortic_aiot.sdk.service.Service method)</a>
 </li>
+      </ul></li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.app_events.ExceptionTypes.ProcessError">ProcessError (cortic_aiot.sdk.app_events.ExceptionTypes attribute)</a>
 </li>
   </ul></td>
@@ -584,20 +594,32 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.send_input_data">send_input_data() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
 </li>
+      <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.service.Service">Service (class in cortic_aiot.sdk.service)</a>
+</li>
+      <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_data">set_data() (cortic_aiot.sdk.ui.input_widgets.DropdownMenu method)</a>
+
+      <ul>
+        <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.PinPut.set_data">(cortic_aiot.sdk.ui.input_widgets.PinPut method)</a>
+</li>
+        <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField.set_data">(cortic_aiot.sdk.ui.input_widgets.TextField method)</a>
+</li>
+      </ul></li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.PipelineNode.set_input">set_input() (cortic_aiot.sdk.pipeline.PipelineNode method)</a>
+</li>
+      <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_selected_item">set_selected_item() (cortic_aiot.sdk.ui.input_widgets.DropdownMenu method)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.widget_tree.WidgetTree.set_target">set_target() (cortic_aiot.sdk.ui.widget_tree.WidgetTree method)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.app.App.setup">setup() (cortic_aiot.sdk.app.App method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.app_events.ExceptionTypes.SetupError">SetupError (cortic_aiot.sdk.app_events.ExceptionTypes attribute)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.Slider">Slider (class in cortic_aiot.sdk.ui.input_widgets)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.start">start() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline.Pipeline.stop">stop() (cortic_aiot.sdk.pipeline.Pipeline method)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.html#cortic_aiot.sdk.pipeline_states.PipelineState.Stopped">Stopped (cortic_aiot.sdk.pipeline_states.PipelineState attribute)</a>
@@ -631,6 +653,8 @@
       <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField">TextField (class in cortic_aiot.sdk.ui.input_widgets)</a>
 </li>
       <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.Toggle">Toggle (class in cortic_aiot.sdk.ui.input_widgets)</a>
+</li>
+      <li><a href="source/cortic_aiot.sdk.ui.html#cortic_aiot.sdk.ui.input_widgets.TextField.toggle_obscure_text">toggle_obscure_text() (cortic_aiot.sdk.ui.input_widgets.TextField method)</a>
 </li>
   </ul></td>
 </tr></table>

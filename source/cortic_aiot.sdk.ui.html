@@ -54,6 +54,7 @@
 <li class="toctree-l5"><a class="reference internal" href="cortic_aiot.sdk.html#module-cortic_aiot.sdk.logging">cortic_aiot.sdk.logging module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="cortic_aiot.sdk.html#module-cortic_aiot.sdk.pipeline">cortic_aiot.sdk.pipeline module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="cortic_aiot.sdk.html#module-cortic_aiot.sdk.pipeline_states">cortic_aiot.sdk.pipeline_states module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cortic_aiot.sdk.html#module-cortic_aiot.sdk.service">cortic_aiot.sdk.service module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="cortic_aiot.sdk.html#module-cortic_aiot.sdk.streaming_peer">cortic_aiot.sdk.streaming_peer module</a></li>
 <li class="toctree-l5"><a class="reference internal" href="cortic_aiot.sdk.html#module-cortic_aiot.sdk.streaming_states">cortic_aiot.sdk.streaming_states module</a></li>
 </ul>
@@ -324,12 +325,12 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 <span id="cortic-aiot-sdk-ui-input-widgets-module"></span><h2>cortic_aiot.sdk.ui.input_widgets module<a class="headerlink" href="#module-cortic_aiot.sdk.ui.input_widgets" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.TextField">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.ui.input_widgets.</span></span><span class="sig-name descname"><span class="pre">TextField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#212B36'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#919EAB'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obscure_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.TextField" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.ui.input_widgets.</span></span><span class="sig-name descname"><span class="pre">TextField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#212B36'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#919EAB'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#919EAB'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obscure_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.TextField" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#cortic_aiot.sdk.ui.widget.Widget" title="cortic_aiot.sdk.ui.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a></p>
 <p>A UI element representing a text field.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.TextField.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#212B36'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#919EAB'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obscure_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.TextField.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#212B36'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#919EAB'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#919EAB'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obscure_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.TextField.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Initializes the TextField widget.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -342,6 +343,8 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 <li><p><strong>font_color</strong> (<em>str</em>) – The font color.</p></li>
 <li><p><strong>label_font_size</strong> (<em>int</em>) – The label font size.</p></li>
 <li><p><strong>label_font_color</strong> (<em>str</em>) – The label font color.</p></li>
+<li><p><strong>float_label_font_size</strong> (<em>int</em>) – The label font size when the TextField is focused.</p></li>
+<li><p><strong>float_label_font_color</strong> (<em>str</em>) – The label font color when the TextField is focused.</p></li>
 <li><p><strong>obscure_text</strong> (<em>bool</em>) – Whether to obscure the input text (e.g., for password input).</p></li>
 </ul>
 </dd>
@@ -351,6 +354,35 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_sdk.widgets</span> <span class="kn">import</span> <span class="n">TextField</span>
 <span class="n">username_field</span> <span class="o">=</span> <span class="n">TextField</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">label_text</span><span class="o">=</span><span class="s2">&quot;Username&quot;</span><span class="p">,</span> <span class="n">hint_text</span><span class="o">=</span><span class="s2">&quot;Enter your username&quot;</span><span class="p">)</span>
 <span class="n">password_field</span> <span class="o">=</span> <span class="n">TextField</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">label_text</span><span class="o">=</span><span class="s2">&quot;Password&quot;</span><span class="p">,</span> <span class="n">hint_text</span><span class="o">=</span><span class="s2">&quot;Enter your password&quot;</span><span class="p">,</span> <span class="n">obscure_text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.TextField.set_data">
+<span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.TextField.set_data" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the text of the TextField.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – The text to be set.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">username_field</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="s2">&quot;my_username&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.TextField.toggle_obscure_text">
+<span class="sig-name descname"><span class="pre">toggle_obscure_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.TextField.toggle_obscure_text" title="Permalink to this definition"></a></dt>
+<dd><p>Toggles the obscure text setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">password_field</span><span class="o">.</span><span class="n">toggle_obscure_text</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -392,12 +424,12 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.DropdownMenu">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.ui.input_widgets.</span></span><span class="sig-name descname"><span class="pre">DropdownMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.DropdownMenu" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.ui.input_widgets.</span></span><span class="sig-name descname"><span class="pre">DropdownMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focus_border_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffffff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.DropdownMenu" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#cortic_aiot.sdk.ui.widget.Widget" title="cortic_aiot.sdk.ui.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a></p>
 <p>A UI element representing a dropdown menu.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.DropdownMenu.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focus_border_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffffff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float_label_font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#637381'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Initializes the DropdownMenu widget.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -406,6 +438,13 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 a widget with a width of 100 and a height of 100, and starting at the top left corner.</p></li>
 <li><p><strong>font_size</strong> (<em>int</em>) – The font size.</p></li>
 <li><p><strong>font_color</strong> (<em>str</em>) – The font color.</p></li>
+<li><p><strong>selected_index</strong> (<em>int</em>) – The selected index.</p></li>
+<li><p><strong>label_text</strong> (<em>str</em>) – The label text.</p></li>
+<li><p><strong>label_font_size</strong> (<em>int</em>) – The label font size.</p></li>
+<li><p><strong>label_font_color</strong> (<em>str</em>) – The label font color.</p></li>
+<li><p><strong>focus_border_color</strong> (<em>str</em>) – The focus border color.</p></li>
+<li><p><strong>float_label_font_size</strong> (<em>int</em>) – The float label font size.</p></li>
+<li><p><strong>float_label_font_color</strong> (<em>str</em>) – The float label font color.</p></li>
 <li><p><strong>data_list</strong> (<em>list</em>) – The list of choices for the dropdown menu.</p></li>
 </ul>
 </dd>
@@ -418,16 +457,52 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_selected_item">
+<span class="sig-name descname"><span class="pre">set_selected_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_selected_item" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the selected item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the selected item.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_sdk.widgets</span> <span class="kn">import</span> <span class="n">DropdownMenu</span>
+<span class="n">dropdown_menu</span> <span class="o">=</span> <span class="n">DropdownMenu</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">data_list</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Choice 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 3&quot;</span><span class="p">])</span>
+<span class="n">dropdown_menu</span><span class="o">.</span><span class="n">set_selected_item</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_data">
+<span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.DropdownMenu.set_data" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the data list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_list</strong> (<em>list</em>) – The list of choices for the dropdown menu.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_sdk.widgets</span> <span class="kn">import</span> <span class="n">DropdownMenu</span>
+<span class="n">dropdown_menu</span> <span class="o">=</span> <span class="n">DropdownMenu</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">data_list</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Choice 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 3&quot;</span><span class="p">])</span>
+<span class="n">dropdown_menu</span><span class="o">.</span><span class="n">set_data</span><span class="p">([</span><span class="s2">&quot;Choice 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 3&quot;</span><span class="p">,</span> <span class="s2">&quot;Choice 4&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.PinPut">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.ui.input_widgets.</span></span><span class="sig-name descname"><span class="pre">PinPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_separation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submitted_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.PinPut" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_aiot.sdk.ui.input_widgets.</span></span><span class="sig-name descname"><span class="pre">PinPut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_separation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffffff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submitted_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">following_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffffff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.PinPut" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#cortic_aiot.sdk.ui.widget.Widget" title="cortic_aiot.sdk.ui.widget.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a></p>
 <p>A UI element representing a PinPut (PIN input).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.PinPut.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_separation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submitted_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.PinPut.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">each_field_separation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffffff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submitted_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#1890FF'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">following_field_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#ffffff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.PinPut.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Initializes the PinPut widget.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -438,8 +513,11 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 <li><p><strong>each_field_width</strong> (<em>int</em>) – The width of each field.</p></li>
 <li><p><strong>each_field_height</strong> (<em>int</em>) – The height of each field.</p></li>
 <li><p><strong>each_field_separation</strong> (<em>int</em>) – The separation between each field.</p></li>
+<li><p><strong>font_size</strong> (<em>int</em>) – The font size of the PIN input.</p></li>
+<li><p><strong>font_color</strong> (<em>str</em>) – The font color of the PIN input.</p></li>
 <li><p><strong>selected_field_color</strong> (<em>str</em>) – The color of the selected field.</p></li>
 <li><p><strong>submitted_field_color</strong> (<em>str</em>) – The color of the submitted field.</p></li>
+<li><p><strong>following_field_color</strong> (<em>str</em>) – The color of the following field.</p></li>
 <li><p><strong>on_event</strong> (<em>Function</em>) – The custom handler provided by developer when a pinput event occurs.</p></li>
 </ul>
 </dd>
@@ -448,6 +526,24 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_sdk.widgets</span> <span class="kn">import</span> <span class="n">PinPut</span>
 <span class="n">pin_put</span> <span class="o">=</span> <span class="n">PinPut</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">field_count</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">each_field_width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">each_field_height</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">each_field_separation</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.PinPut.set_data">
+<span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.PinPut.set_data" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the data of the PinPut.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – The data to set.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_sdk.widgets</span> <span class="kn">import</span> <span class="n">PinPut</span>
+<span class="n">pin_put</span> <span class="o">=</span> <span class="n">PinPut</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">field_count</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">each_field_width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">each_field_height</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">each_field_separation</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">pin_put</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -562,7 +658,17 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>row_widgets</strong> (<em>list</em>) – The list of UI elements in a row of the list item.</p></li>
+<li><p><strong>row_widgets</strong> (<em>list</em>) – <p>The list of UI elements in a row of the list item. Currently, only
+the following widgets are supported:</p>
+<blockquote>
+<div><ul>
+<li><p>Label</p></li>
+<li><p>Icon</p></li>
+<li><p>Image</p></li>
+<li><p>Button.</p></li>
+</ul>
+</div></blockquote>
+</p></li>
 <li><p><strong>alignment</strong> (<em>str</em>) – The alignment of the list item.</p></li>
 </ul>
 </dd>
@@ -1088,9 +1194,6 @@ target device will then render the updated WidgetTree object.</p>
 
 </dd></dl>
 
-</section>
-<section id="module-cortic_aiot.sdk.ui">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cortic_aiot.sdk.ui" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 

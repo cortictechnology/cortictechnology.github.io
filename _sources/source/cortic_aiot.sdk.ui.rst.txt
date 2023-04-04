@@ -51,11 +51,3 @@ cortic\_aiot.sdk.ui.widget\_tree module
    :members:
    :undoc-members:
    :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: cortic_aiot.sdk.ui
-   :members:
-   :undoc-members:
-   :show-inheritance:
