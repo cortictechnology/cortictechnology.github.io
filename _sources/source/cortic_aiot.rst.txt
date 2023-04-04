@@ -1,0 +1,10 @@
+cortic\_aiot package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 6
+
+   cortic_aiot.sdk

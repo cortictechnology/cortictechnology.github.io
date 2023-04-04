@@ -1,0 +1,85 @@
+cortic\_aiot.sdk package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   cortic_aiot.sdk.ui
+
+Submodules
+----------
+
+cortic\_aiot.sdk.app module
+---------------------------
+
+.. automodule:: cortic_aiot.sdk.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.app\_events module
+-----------------------------------
+
+.. automodule:: cortic_aiot.sdk.app_events
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.data\_consumer module
+--------------------------------------
+
+.. automodule:: cortic_aiot.sdk.data_consumer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.data\_producer module
+--------------------------------------
+
+.. automodule:: cortic_aiot.sdk.data_producer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.logging module
+-------------------------------
+
+.. automodule:: cortic_aiot.sdk.logging
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.pipeline module
+--------------------------------
+
+.. automodule:: cortic_aiot.sdk.pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.pipeline\_states module
+----------------------------------------
+
+.. automodule:: cortic_aiot.sdk.pipeline_states
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.streaming\_peer module
+---------------------------------------
+
+.. automodule:: cortic_aiot.sdk.streaming_peer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.streaming\_states module
+-----------------------------------------
+
+.. automodule:: cortic_aiot.sdk.streaming_states
+   :members:
+   :undoc-members:
+   :show-inheritance:

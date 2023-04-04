@@ -1,0 +1,61 @@
+cortic\_aiot.sdk.ui package
+===========================
+
+Submodules
+----------
+
+cortic\_aiot.sdk.ui.basic\_widgets module
+-----------------------------------------
+
+.. automodule:: cortic_aiot.sdk.ui.basic_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.ui.input\_widgets module
+-----------------------------------------
+
+.. automodule:: cortic_aiot.sdk.ui.input_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.ui.misc\_widgets module
+----------------------------------------
+
+.. automodule:: cortic_aiot.sdk.ui.misc_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.ui.viewer\_widgets module
+------------------------------------------
+
+.. automodule:: cortic_aiot.sdk.ui.viewer_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.ui.widget module
+---------------------------------
+
+.. automodule:: cortic_aiot.sdk.ui.widget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_aiot.sdk.ui.widget\_tree module
+---------------------------------------
+
+.. automodule:: cortic_aiot.sdk.ui.widget_tree
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cortic_aiot.sdk.ui
+   :members:
+   :undoc-members:
+   :show-inheritance:
