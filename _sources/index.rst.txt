@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Cortic App Programming Interface's documentation!
+Welcome to Cortic Software Development Kit's documentation!
 ============================================================
 
 .. toctree::
