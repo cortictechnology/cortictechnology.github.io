@@ -1008,7 +1008,7 @@ The handler should have the following signature: <code class="docutils literal n
 </div></blockquote>
 <p>Event_data is a dictionary containing the following keys:</p>
 <blockquote>
-<div><p>For event_type other than “wheel_scroll” and “pan_end”:</p>
+<div><p>For event_type other than “wheel_scroll”, “pan_update”, and “pan_end”:</p>
 <blockquote>
 <div><ul>
 <li><p>”x”: The x coordinate of the mouse event.</p></li>
@@ -1031,6 +1031,15 @@ The handler should have the following signature: <code class="docutils literal n
 <li><p>”y”: The y coordinate of the mouse event.</p></li>
 <li><p>”velocity_x”: The x velocity of the mouse when the drag ends.</p></li>
 <li><p>”velocity_y”: The y velocity of the mouse when the drag ends.</p></li>
+</ul>
+</div></blockquote>
+<p>For event_type “pan_update”:</p>
+<blockquote>
+<div><ul>
+<li><p>”x”: The x coordinate of the mouse event.</p></li>
+<li><p>”y”: The y coordinate of the mouse event.</p></li>
+<li><p>”delta_x”: The x delta of the mouse when the drag ends.</p></li>
+<li><p>”delta_y”: The y delta of the mouse when the drag ends.</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
