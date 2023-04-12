@@ -718,6 +718,26 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_aiot.sdk.ui.input_widgets.ListView.set_data">
+<span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.input_widgets.ListView.set_data" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the data of the list view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>list</em>) – The data to be displayed in the list. Each item in the list should be a ListItem object.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_sdk.widgets</span> <span class="kn">import</span> <span class="n">ListView</span><span class="p">,</span> <span class="n">ListItem</span><span class="p">,</span> <span class="n">Text</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="s2">&quot;Text&quot;</span><span class="p">)</span>
+<span class="n">list_item</span> <span class="o">=</span> <span class="n">ListItem</span><span class="p">([</span><span class="n">text</span><span class="p">],</span> <span class="n">alignment</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">)</span>
+<span class="n">list_view</span> <span class="o">=</span> <span class="n">ListView</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="p">[</span><span class="n">list_item</span><span class="p">],</span> <span class="n">item_padding</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">selected_color</span><span class="o">=</span><span class="s2">&quot;#FFC601&quot;</span><span class="p">,</span> <span class="n">selected_idx</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">selectable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">item_radius</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">on_event</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">list_view</span><span class="o">.</span><span class="n">set_data</span><span class="p">([</span><span class="n">list_item</span><span class="p">,</span> <span class="n">list_item</span><span class="p">])</span> <span class="c1"># Becomes two rows of list items</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1181,13 +1201,17 @@ for rendering. The display driver on the target device will then render the Widg
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.ui.widget_tree.WidgetTree.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.widget_tree.WidgetTree.update" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.ui.widget_tree.WidgetTree.update" title="Permalink to this definition"></a></dt>
 <dd><p>This functions checks if there are updates in the widgets’ data or apperaance. If there are udpates,
 it will send these latest changes to the display driver on the target device. The display driver on the
-target device will then render the updated WidgetTree object.</p>
+target device will then render the updated WidgetTree object. If the widget parameter is not None,
+it will only update the specific widget and its children.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Example<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference internal" href="#cortic_aiot.sdk.ui.widget.Widget" title="cortic_aiot.sdk.ui.widget.Widget"><em>Widget</em></a>) – The widget to update. If None, it will update the entire WidgetTree.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_aiot</span> <span class="kn">import</span> <span class="n">WidgetTree</span>
 <span class="n">container</span> <span class="o">=</span> <span class="n">Container</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
