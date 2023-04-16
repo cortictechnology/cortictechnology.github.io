@@ -652,7 +652,7 @@ preventing unexpected behavior due to automatic fail-over to another webcam serv
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.pipeline.PipelineNode.set_input">
-<span class="sig-name descname"><span class="pre">set_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.pipeline.PipelineNode.set_input" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.pipeline.PipelineNode.set_input" title="Permalink to this definition"></a></dt>
 <dd><p>Configures the service associated with this node to listen to the output channel(s)
 of the services associated with the provided nodes for input data.</p>
 <p>By default, services associated with the nodes in the list are not activated and do not
@@ -663,8 +663,10 @@ the service will be deactivated to save resources. This design ensures efficient
 usage by only processing and transmitting data when needed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>nodes</strong> – A list of PipelineNodes that the service associated wth this node needs
-to obtain data from.</p>
+<dd class="field-odd"><p><strong>input_map</strong> (<em>dict</em>) – A dictionary of input data sources. The keys are the names of the input
+ports of the service associated with this node, and the values are dictionaries of
+containing the names of input data and the nodes from which to receive it. The name of
+input ports and input data must match the names specified in the service’s implementation.</p>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
@@ -672,7 +674,7 @@ to obtain data from.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pipeline</span> <span class="kn">import</span> <span class="n">PipelineNode</span>
 <span class="n">webcam_node</span> <span class="o">=</span> <span class="n">PipelineNode</span><span class="p">(</span><span class="s2">&quot;webcam_service&quot;</span><span class="p">)</span>
 <span class="n">facemesh_estimation_node</span> <span class="o">=</span> <span class="n">PipelineNode</span><span class="p">(</span><span class="s2">&quot;facemesh_estimation_service&quot;</span><span class="p">)</span>
-<span class="n">facemesh_estimation_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">([</span><span class="n">webcam_node</span><span class="p">])</span>
+<span class="n">facemesh_estimation_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">({</span><span class="s2">&quot;camera_input&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">webcam_node</span><span class="p">}})</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -708,9 +710,9 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;example_pipeline&quot;</span><span class="p">)</span>
 <span class="n">input_node</span> <span class="o">=</span> <span class="n">PipelineNode</span><span class="p">(</span><span class="s2">&quot;input_node&quot;</span><span class="p">)</span>
 <span class="n">processing_node</span> <span class="o">=</span> <span class="n">PipelineNode</span><span class="p">(</span><span class="s2">&quot;processing_node&quot;</span><span class="p">)</span>
-<span class="n">processing_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">([</span><span class="n">input_node</span><span class="p">])</span>
+<span class="n">processing_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">({</span><span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">input_node</span><span class="p">}})</span>
 <span class="n">output_node</span> <span class="o">=</span> <span class="n">PipelineNode</span><span class="p">(</span><span class="s2">&quot;output_node&quot;</span><span class="p">)</span>
-<span class="n">output_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">([</span><span class="n">processing_node</span><span class="p">])</span>
+<span class="n">output_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">processing_node</span><span class="p">})</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">input_node</span><span class="p">)</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">processing_node</span><span class="p">)</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">output_node</span><span class="p">)</span>
@@ -780,12 +782,17 @@ the output port of the Pipeline associated with this node will also be removed.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_aiot.sdk.pipeline.Pipeline.add_input_port">
-<span class="sig-name descname"><span class="pre">add_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.pipeline.Pipeline.add_input_port" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">add_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_aiot.sdk.pipeline.Pipeline.add_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Add an input port to the pipeline with a specified name. The input port can be used to send data
 to the pipeline. Any nodes in the pipeline can set their input to this input port.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name to be associated with the input port.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_type</strong> (<em>dict.</em>) – The type of data that will be sent to the input port. This parameter should be provided as
+&lt;key&gt;-&lt;value&gt; pairs, in which the &lt;key&gt; is the name of the data, and &lt;value&gt; is the
+type of the data. The possible types are defined in the service_data_types module.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name to be associated with the input port.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>ValueError</strong> – If an input port with the same name already exists.</p>
@@ -795,7 +802,7 @@ to the pipeline. Any nodes in the pipeline can set their input to this input por
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_aiot</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;example_pipeline&quot;</span><span class="p">)</span>
-<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_port_name&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_port_name&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">ServiceDataTypes</span><span class="o">.</span><span class="n">CvFrame</span><span class="p">})</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -816,7 +823,7 @@ to the pipeline. Any nodes in the pipeline can set their input to this input por
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_aiot</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;example_pipeline&quot;</span><span class="p">)</span>
-<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_name&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_name&quot;</span><span class="p">,</span>  <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">ServiceDataTypes</span><span class="o">.</span><span class="n">CvFrame</span><span class="p">})</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">remove_input_port</span><span class="p">(</span><span class="s2">&quot;input_name&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -838,8 +845,8 @@ to the pipeline. Any nodes in the pipeline can set their input to this input por
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_aiot</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;example_pipeline&quot;</span><span class="p">)</span>
-<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_port_1&quot;</span><span class="p">)</span>
-<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_port_2&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_port_1&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">ServiceDataTypes</span><span class="o">.</span><span class="n">CvFrame</span><span class="p">})</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_port_2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">ServiceDataTypes</span><span class="o">.</span><span class="n">CvFrame</span><span class="p">})</span>
 <span class="n">input_names</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">get_input_port_names</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -932,16 +939,22 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the input port name does not exist in the pipeline inputs.</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the input port name does not exist in the pipeline inputs.</p></li>
+<li><p><strong>ValueError</strong> – If the data is not a dictionary.</p></li>
+<li><p><strong>ValueError</strong> – If the input data is not a dictionary with string keys.</p></li>
+<li><p><strong>ValueError</strong> – If the input data contains keys that do not match the output data type of the input port.</p></li>
+<li><p><strong>ValueError</strong> – If the data type of the input data does not match the output data type of the input port.</p></li>
+</ul>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_aiot</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;example_pipeline&quot;</span><span class="p">)</span>
-<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_name&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_input_port</span><span class="p">(</span><span class="s2">&quot;input_name&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">ServiceDataTypes</span><span class="o">.</span><span class="n">CvFrame</span><span class="p">})</span>
 <span class="n">processing_node</span> <span class="o">=</span> <span class="n">PipelineNode</span><span class="p">(</span><span class="s2">&quot;processing_node&quot;</span><span class="p">)</span>
-<span class="n">processing_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">([</span><span class="n">pipeline</span><span class="o">.</span><span class="n">input_ports</span><span class="p">[</span><span class="s2">&quot;input_name&quot;</span><span class="p">]])</span>
+<span class="n">processing_node</span><span class="o">.</span><span class="n">set_input</span><span class="p">({</span><span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="n">pipeline</span><span class="o">.</span><span class="n">input_ports</span><span class="p">[</span><span class="s2">&quot;input_name&quot;</span><span class="p">]}})</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">processing_node</span><span class="p">)</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">add_output_port</span><span class="p">(</span><span class="s2">&quot;output_name&quot;</span><span class="p">,</span> <span class="n">processing_node</span><span class="p">)</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">send_input_data</span><span class="p">(</span><span class="s2">&quot;input_name&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_data&quot;</span><span class="p">)</span>
@@ -1012,7 +1025,7 @@ with the output port name as the key and the output data as the value.</p>
 their inputs accordingly.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Exception</strong> – If the pipeline is already running or if the pipeline is rerouting.</p>
+<dd class="field-odd"><p><strong>Exception</strong> – If the pipeline is already running.</p>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
