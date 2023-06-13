@@ -1,0 +1,11 @@
+cortic\_platform package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 6
+
+   cortic_platform.sdk
+

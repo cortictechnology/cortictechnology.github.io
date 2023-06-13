@@ -1,7 +1,7 @@
-cortic_aiot
-===========
+cortic_platform
+===============
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 4
 
-   cortic_aiot
+   cortic_platform

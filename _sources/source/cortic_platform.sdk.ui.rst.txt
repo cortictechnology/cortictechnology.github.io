@@ -1,0 +1,53 @@
+cortic\_platform.sdk.ui package
+===============================
+
+Submodules
+----------
+
+cortic\_platform.sdk.ui.basic\_widgets module
+---------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.basic_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_platform.sdk.ui.input\_widgets module
+---------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.input_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_platform.sdk.ui.misc\_widgets module
+--------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.misc_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_platform.sdk.ui.viewer\_widgets module
+----------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.viewer_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_platform.sdk.ui.widget module
+-------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.widget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cortic\_platform.sdk.ui.widget\_tree module
+-------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.widget_tree
+   :members:
+   :undoc-members:
+   :show-inheritance:
