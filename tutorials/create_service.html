@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            p {
-                color: #E6E6E6;
-            }
+<html lang="en">
 
-            h1 {
-                color: #E6E6E6;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a New Service</title>
+    <link rel="stylesheet" href="cortic_styles.css">
+</head>
 
-            h2 {
-                color: #E6E6E6;
-            }
-
-            h3 {
-                color: #E6E6E6;
-            }
-        </style>
-    </head>
 <body>
 
-<h1>Create Your First Service</h1>
+    <h1>Creating a New Service</h1>
+    <p>This guide aims to instruct developers on creating a new service by subclassing from the base "Service" class available in the Cortic Platform SDK.</p>
 
-<p>Create an example service</p>
+    <h2>Overview</h2>
+    <p>For effective integration into the Cortic Platform, it is crucial for your service to implement three core methods:</p>
+    <ul>
+        <li><code>activate</code></li>
+        <li><code>process</code></li>
+        <li><code>deactivate</code></li>
+    </ul>
+
+    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+
+    <h2>Platform Independent Services</h2>
+    <p>Developing a service that remains independent of the underlying platform provides flexibility and broadens compatibility. There are three primary methods to achieve this:</p>
+
+    <h3>1. Using Main Processor for Computations</h3>
+    <p>By focusing on the main processor for all computations, you eschew the need for specialized hardware. This ensures a generic compatibility across platforms.</p>
+
+    <h3>2. Leveraging Python Packages</h3>
+    <p>Python packages such as PyTorch can support multiple backends. By utilizing such a package, you can abstract away the specifics of the backend and ensure your service works seamlessly across various platforms.</p>
+
+    <h3>3. Conditional Requirements in <code>requirements.txt</code></h3>
+    <p>Edit the <code>requirements.txt</code> to add conditional requirements specific to each platform. Additionally, detect the current platform within your application to execute tasks that are platform-specific.</p>
+
+    <h2>Sample Service: Face Detection</h2>
+    <p>To better understand the creation of a generic service, let's examine a face detection service for each of the scenarios mentioned above:</p>
+
+    <h3>1. Main Processor-Based Face Detection</h3>
+    <p>Detail the steps and logic of utilizing the main processor for face detection. Highlight any challenges or nuances specific to this approach.</p>
+    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+
+    <h3>2. PyTorch Backend-Based Face Detection</h3>
+    <p>Illustrate how PyTorch or similar packages can be used to abstract backend specifics and develop a face detection service that remains platform independent.</p>
+    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+
+    <h3>3. Conditional Requirements-Based Face Detection</h3>
+    <p>Explain how to structure the <code>requirements.txt</code> for platform-specific needs and how to detect the current platform within the application to execute relevant tasks.</p>
+    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+
+    <h2>Next Steps</h2>
+    <p>Now that you have successfully created a service:</p>
+    <ul>
+        <li>Consider optimizing the service for better performance.</li>
+        <li>Explore integrating additional functionalities to enhance the service capabilities.</li>
+        <li>Look into the advanced features of the Cortic Platform SDK for more sophisticated implementations.</li>
+    </ul>
 
 </body>
-</html>
 
+</html>
