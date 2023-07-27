@@ -1,77 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cortic_styles.css">
     <title>Device Management Guide for the Cortic Platform</title>
 </head>
+
 <body>
 
-<h1>Device Management on the Cortic Platform</h1>
+    <h1>Device Management on the Cortic Platform</h1>
 
-<p>Welcome to the device management guide for the Cortic Platform. This guide provides detailed instructions on how to manage devices using the Cortic AI Hub.</p>
+    <p>Welcome to the device management guide for the Cortic Platform. This guide provides detailed instructions on how
+        to manage devices using the Cortic AI Hub.</p>
 
-<h2>Adding a Default Device</h2>
-<p>With the Cortic AI Hub, you can add a default device that represents the computer running the hub.</p>
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-<p>Follow the prompts under the Devices tab in the Cortic AI Hub to add this default device.</p>
+    <h2>Adding a Default Device</h2>
+    <p>With the Cortic AI Hub, you can add a default device that represents the computer running the hub.</p>
+    <p>Follow the prompts under the Devices tab in the Cortic AI Hub to add this default device.</p>
+    <div class="screenshot"><img src="./assets/managing_devices/default_device.png"></div>
 
-<h2>Installing and Adding Additional Devices</h2>
-<p>To expand the devices managed by the Cortic AI Hub, follow the steps below to install and setup the Device Manager:</p>
+    <h2>Installing and Adding Additional Devices</h2>
+    <p>To expand the devices managed by the Cortic AI Hub, follow the steps below to install and setup the Device
+        Manager:</p>
 
-<ol>
-    <li>Navigate to <a href="https://www.cortic.ca">www.cortic.ca</a> to download the Device Manager.</li>
+    <ol>
+        <li>Navigate to <a href="https://www.cortic.ca">Cortic Technology</a> website to download the Device Manager.
+            <div class="screenshot"><img src="./assets/managing_devices/download_device_manager.png"></div>
+        </li>
+        <li>Once downloaded, unzip the downloaded file.
+        </li>
+        <li>Open a terminal and run the setup script provided within the unzipped folder.
+            <br><br>
+            <div><code>python3 setup_device_manager.py</code></div>
+        </li>
+        <li>Follow the instruction provided at the end of the setup script to launch the Device Manager.
+            <div class="screenshot"><img src="./assets/managing_devices/install_device_manager.png"></div>
+        </li>
+    </ol>
+
+    <!-- <h2>Launching Device Manager on Startup</h2>
+
+    <h3>macOS:</h3>
+    <ol>
+        <li>Open System Preferences.</li>
+        <li>Click on "Users & Groups".</li>
+        <li>Click on your username and select "Login Items".</li>
+        <li>Click on the "+" button and navigate to the directory containing "launch_device_manager.py".</li>
+        <li>Add a new item with the command "python3 /path/to/launch_device_manager.py" where "/path/to/" should be
+            replaced with the actual path to the script.</li>
+    </ol>
     <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
-    <li>Once downloaded, unzip the downloaded file.</li>
+    <h3>Windows 11:</h3>
+    <ol>
+        <li>Press "Win + R" to open the Run dialog.</li>
+        <li>Type "shell:startup" and press Enter.</li>
+        <li>Create a shortcut with the target being "python.exe /path/to/launch_device_manager.py" where "/path/to/"
+            should be replaced with the actual path to the script.</li>
+        <li>Drag and drop this shortcut into the Startup folder.</li>
+    </ol>
     <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
-    <li>Run the setup script provided within the unzipped folder.</li>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    <h3>Ubuntu 20.04 LTS:</h3>
+    <ol>
+        <li>Go to "All Applications".</li>
+        <li>Search for "Startup Applications".</li>
+        <li>Click on "Add".</li>
+        <li>In the command field, type "python3 /path/to/launch_device_manager.py" where "/path/to/" should be replaced
+            with the actual path to the script.</li>
+        <li>Provide any necessary details and click "Add".</li>
+    </ol>
+    <div class="screenshot-placeholder">&lt;screenshot&gt;</div> -->
 
-    <li>Launch the Device Manager by running the Python script "launch_device_manager.py".</li>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-</ol>
-
-<h2>Launching Device Manager on Startup</h2>
-
-<h3>macOS:</h3>
-<ol>
-    <li>Open System Preferences.</li>
-    <li>Click on "Users & Groups".</li>
-    <li>Click on your username and select "Login Items".</li>
-    <li>Click on the "+" button and navigate to the directory containing "launch_device_manager.py".</li>
-    <li>Add a new item with the command "python3 /path/to/launch_device_manager.py" where "/path/to/" should be replaced with the actual path to the script.</li>
-</ol>
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
-<h3>Windows 11:</h3>
-<ol>
-    <li>Press "Win + R" to open the Run dialog.</li>
-    <li>Type "shell:startup" and press Enter.</li>
-    <li>Create a shortcut with the target being "python.exe /path/to/launch_device_manager.py" where "/path/to/" should be replaced with the actual path to the script.</li>
-    <li>Drag and drop this shortcut into the Startup folder.</li>
-</ol>
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
-<h3>Ubuntu 20.04 LTS:</h3>
-<ol>
-    <li>Go to "All Applications".</li>
-    <li>Search for "Startup Applications".</li>
-    <li>Click on "Add".</li>
-    <li>In the command field, type "python3 /path/to/launch_device_manager.py" where "/path/to/" should be replaced with the actual path to the script.</li>
-    <li>Provide any necessary details and click "Add".</li>
-</ol>
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
-<h2>Next Steps</h2>
-<p>Now that you've successfully set up your devices, consider delving deeper into the capabilities of the Cortic Platform:</p>
-<ul>
-    <li>Explore the documentation and tutorials on how to write new apps tailored to your needs.</li>
-    <li>Dive into the guides on developing custom services to expand the functionalities of the platform.</li>
-    <li>Join the Cortic community forums to share your projects, ask questions, and collaborate with fellow developers.</li>
-</ul>
+    <h2>Next Steps</h2>
+    <p>Now that you've successfully set up your devices, consider delving deeper into the capabilities of the Cortic
+        Platform:</p>
+    <ul>
+        <li>Explore the documentation and tutorials on how to write new apps tailored to your needs.</li>
+        <li>Dive into the guides on developing custom services to expand the functionalities of the platform.</li>
+        <li>Join the Cortic community forums to share your projects, ask questions, and collaborate with fellow
+            developers.</li>
+    </ul>
 
 </body>
+
 </html>
