@@ -29,6 +29,26 @@ img {
     margin: 20px 0;
 }
 
+/* unvisited link */
+a:link {
+    color: orange;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: lightgray;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: lightblue;
+  }
+  
+  /* selected link */
+  a:active {
+    color: burlywood;
+  }
+
 .screenshot-placeholder {
     display: inline-block;
     background-color: #555;
