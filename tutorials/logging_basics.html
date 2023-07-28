@@ -38,8 +38,14 @@
     </ol>
 
     An example of a custom-colored log message is shown below:
+    <br><br>
+    <code>log("This is a &lt;p style='color:blue'&gt;colored&lt;/p&gt; log", log_level=LogLevel.Info)</code>
+    <br><br>
+    The above code snippet will produce the following output in the console:
 
-    <code></code>
+    <div class="screenshot"><img src="./assets/logging_basics/colored_log.png"></div>
+
+
 
     <h2>3. Locating Logging Output in the Cortic AI Hub UI</h2>
 
@@ -47,11 +53,12 @@
     <ol>
         <li>Under the Dev Portal tab, click on "Console" on the top right to display the app console output. The console
             will show all logging message coming from the currently running app.</li>
-        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+        <div class="screenshot"><img src="./assets/logging_basics/app_console_button.png"></div>
+        <div class="screenshot"><img src="./assets/logging_basics/app_console_opened.png"></div>
         <li>Under the Devices tab, select a device on the left hand side. The console will always be shown at the
             bottom. It contains various sub tabs. The first sub tab with the name "Device" will show logging messages
             coming from this device. Other sub tabs show logging messages for each deployed service on a device.</li>
-        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+        <div class="screenshot"><img src="./assets/logging_basics/device_console.png"></div>
     </ol>
 
     <h2>4. Finding Written Log Files in the Filesystem</h2>
@@ -59,20 +66,19 @@
     <p>All logging outputs are also systematically written and stored within the system's filesystem. To find these log
         files:</p>
     <ol>
-        <li>Access the system directory where the Cortic Platform SDK is installed.</li>
+        <li>Access the system's application support directory of the Cortic AI Hub.</li>
         <li>Navigate to the <code>logs</code> sub-directory.</li>
         <li>Here, you'll find log files categorized based on their sources, such as apps, devices, or services.</li>
     </ol>
 
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    <div class="screenshot"><img src="./assets/logging_basics/log_files.png"></div>
 
     <h2>5. The Master Log</h2>
 
     <p>The master log is an aggregate log that combines messages from the entire hub, inclusive of all apps, devices,
         and services. It serves as a consolidated record for all logging activities. You can view the master log from
         the Setting menu from the Cortic AI Hub's system tray icon.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
+    <div class="screenshot"><img src="./assets/logging_basics/master_log.png"></div>
     <h2>6. Importance of Logging</h2>
 
     <p>Logging is indispensable for software development and maintenance. Here's why:</p>
