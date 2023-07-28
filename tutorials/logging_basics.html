@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,74 +8,90 @@
     <link rel="stylesheet" href="cortic_styles.css">
     <title>Logging Basics</title>
 </head>
+
 <body>
 
-<h1>Logging Basics for the Cortic Platform SDK</h1>
+    <h1>Logging Basics for the Cortic Platform SDK</h1>
 
-<p>Understanding and effectively utilizing the logging module in the Cortic Platform SDK is paramount for ensuring efficient debugging and problem-solving. This guide seeks to provide comprehensive instructions on leveraging the logging features.</p>
+    <p>Understanding and effectively utilizing the logging module in the Cortic Platform SDK is paramount for ensuring
+        efficient debugging and problem-solving. This guide seeks to provide comprehensive instructions on leveraging
+        the logging features.</p>
 
-<h2>1. Introduction to Logging Levels</h2>
+    <h2>1. Introduction to Logging Levels</h2>
 
-<p>The Cortic Platform SDK's logging module classifies logs into three primary levels:</p>
-<ul>
-    <li><strong>Info:</strong> General messages providing runtime information about the application.</li>
-    <li><strong>Warning:</strong> Messages indicating potential issues or warnings which might not necessarily disrupt the application.</li>
-    <li><strong>Error:</strong> Critical messages denoting failures or errors that disrupt the normal functioning of the application.</li>
-</ul>
+    <p>The Cortic Platform SDK's logging module classifies logs into three primary levels:</p>
+    <ul>
+        <li><strong>Info:</strong> General messages providing runtime information about the application.</li>
+        <li><strong>Warning:</strong> Messages indicating potential issues or warnings which might not necessarily
+            disrupt the application.</li>
+        <li><strong>Error:</strong> Critical messages denoting failures or errors that disrupt the normal functioning of
+            the application.</li>
+    </ul>
 
-<h2>2. Custom Coloured Log Messages with Color Tag</h2>
+    <h2>2. Custom Coloured Log Messages with Color Tag</h2>
 
-<p>You can enhance your logging experience with custom color outputs. To use the color tag for custom-colored log messages, follow the procedure below:</p>
-<ol>
-    <li>While creating a log message, use the <code>color</code> tag to specify your desired color.</li>
-    <li>Ensure the selected color aligns with the severity of the log message to provide intuitive feedback.</li>
-</ol>
+    <p>You can enhance your logging experience with custom color outputs. To use the color tag for custom-colored log
+        messages, follow the procedure below:</p>
+    <ol>
+        <li>While creating a log message, use the <code>color</code> tag to specify your desired color.</li>
+        <li>Ensure the selected color aligns with the severity of the log message to provide intuitive feedback.</li>
+    </ol>
 
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    An example of a custom-colored log message is shown below:
 
-<h2>3. Locating Logging Output in the Cortic AI Hub UI</h2>
+    <code></code>
 
-<p>The Cortic AI Hub user interface segregates log outputs for devices, apps, and services. To locate them:</p>
-<ol>
-    <li>Under the Dev Portal tab, click on "Console" on the top right to display the app console output. The console will show all logging message coming from the currently running app.</li>
+    <h2>3. Locating Logging Output in the Cortic AI Hub UI</h2>
+
+    <p>The Cortic AI Hub user interface segregates log outputs for devices, apps, and services. To locate them:</p>
+    <ol>
+        <li>Under the Dev Portal tab, click on "Console" on the top right to display the app console output. The console
+            will show all logging message coming from the currently running app.</li>
+        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+        <li>Under the Devices tab, select a device on the left hand side. The console will always be shown at the
+            bottom. It contains various sub tabs. The first sub tab with the name "Device" will show logging messages
+            coming from this device. Other sub tabs show logging messages for each deployed service on a device.</li>
+        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    </ol>
+
+    <h2>4. Finding Written Log Files in the Filesystem</h2>
+
+    <p>All logging outputs are also systematically written and stored within the system's filesystem. To find these log
+        files:</p>
+    <ol>
+        <li>Access the system directory where the Cortic Platform SDK is installed.</li>
+        <li>Navigate to the <code>logs</code> sub-directory.</li>
+        <li>Here, you'll find log files categorized based on their sources, such as apps, devices, or services.</li>
+    </ol>
+
     <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-    <li>Under the Devices tab, select a device on the left hand side.  The console will always be shown at the bottom.  It contains various sub tabs.  The first sub tab with the name "Device" will show logging messages coming from this device.  Other sub tabs show logging messages for each deployed service on a device.</li>
+
+    <h2>5. The Master Log</h2>
+
+    <p>The master log is an aggregate log that combines messages from the entire hub, inclusive of all apps, devices,
+        and services. It serves as a consolidated record for all logging activities. You can view the master log from
+        the Setting menu from the Cortic AI Hub's system tray icon.</p>
     <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-</ol>
 
-<h2>4. Finding Written Log Files in the Filesystem</h2>
+    <h2>6. Importance of Logging</h2>
 
-<p>All logging outputs are also systematically written and stored within the system's filesystem. To find these log files:</p>
-<ol>
-    <li>Access the system directory where the Cortic Platform SDK is installed.</li>
-    <li>Navigate to the <code>logs</code> sub-directory.</li>
-    <li>Here, you'll find log files categorized based on their sources, such as apps, devices, or services.</li>
-</ol>
+    <p>Logging is indispensable for software development and maintenance. Here's why:</p>
+    <ul>
+        <li>It provides insights into the application's behavior in real-time.</li>
+        <li>Helps in troubleshooting and identifying issues during development and post-deployment phases.</li>
+        <li>Facilitates quicker resolution of errors by pinpointing their sources.</li>
+    </ul>
 
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    <h2>Next Steps</h2>
 
-<h2>5. The Master Log</h2>
-
-<p>The master log is an aggregate log that combines messages from the entire hub, inclusive of all apps, devices, and services. It serves as a consolidated record for all logging activities. You can view the master log from the Setting menu from the Cortic AI Hub's system tray icon.</p>
-<div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
-<h2>6. Importance of Logging</h2>
-
-<p>Logging is indispensable for software development and maintenance. Here's why:</p>
-<ul>
-    <li>It provides insights into the application's behavior in real-time.</li>
-    <li>Helps in troubleshooting and identifying issues during development and post-deployment phases.</li>
-    <li>Facilitates quicker resolution of errors by pinpointing their sources.</li>
-</ul>
-
-<h2>Next Steps</h2>
-
-<p>Now that you have a foundational understanding of the logging basics within the Cortic Platform SDK, consider exploring the following:</p>
-<ul>
-    <li>Dive deeper into advanced logging strategies and best practices.</li>
-    <li>Understand the integration of the logging module with external monitoring and alerting tools.</li>
-    <li>Experiment with creating custom logging formats to tailor the outputs to specific requirements.</li>
-</ul>
+    <p>Now that you have a foundational understanding of the logging basics within the Cortic Platform SDK, consider
+        exploring the following:</p>
+    <ul>
+        <li>Dive deeper into advanced logging strategies and best practices.</li>
+        <li>Understand the integration of the logging module with external monitoring and alerting tools.</li>
+        <li>Experiment with creating custom logging formats to tailor the outputs to specific requirements.</li>
+    </ul>
 
 </body>
+
 </html>

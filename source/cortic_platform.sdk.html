@@ -7,121 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>cortic_platform.sdk package &#8212; Cortic Platform Software Development Kit  documentation</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/insipid.css" />
-
+    <link rel="stylesheet" type="text/css" href="../_static/groundwork.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <script defer src="../_static/insipid.js"></script>
-    <script defer src="../_static/insipid-sidebar.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cortic_platform.sdk.ui package" href="cortic_platform.sdk.ui.html" />
-    <link rel="prev" title="cortic_platform package" href="cortic_platform.html" />
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="prev" title="cortic_platform package" href="cortic_platform.html" /> 
   </head><body>
-    <script type="text/javascript">
-        document.body.classList.add('js');
-    </script>
-    <input type="checkbox" id="sidebar-checkbox" style="display: none;">
-    <label id="overlay" for="sidebar-checkbox"></label>
-    <div class="sidebar-resize-handle"></div>
-    <script type="text/javascript">
-        try {
-            let sidebar = localStorage.getItem('sphinx-sidebar');
-            const sidebar_width = localStorage.getItem('sphinx-sidebar-width');
-            if (sidebar_width) {
-                document.documentElement.style.setProperty('--sidebar-width', sidebar_width);
-            }
-            // show sidebar on wide screen
-            if (!sidebar && window.matchMedia('(min-width: 100rem)').matches) {
-                sidebar = 'visible';
-                // NB: We don't store the value in localStorage!
-            }
-            if (sidebar === 'visible') {
-                document.getElementById('sidebar-checkbox').checked = true;
-            }
-        } catch(e) {
-            console.info(e);
-        }
-    </script>
-    <header id="topbar-placeholder">
-      <div id="topbar">
-        <div id="titlebar">
-          <div class="buttons">
-            <label for="sidebar-checkbox" id="sidebar-button" role="button" tabindex="0" aria-controls="sphinxsidebar" accesskey="M">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
-            </label>
-            <button id="search-button" type="button" title="Search" aria-label="Search" aria-expanded="false" aria-controls="search-form" accesskey="S">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-            </button>
-          </div>
-          <div class="title">
-            <a class="parent" href="cortic_platform.html" accesskey="U">cortic_platform package</a>
-            <a class="top" href="#">cortic_platform.sdk package</a>
-          </div>
-          <div class="buttons">
-            <button id="fullscreen-button" type="button" aria-hidden="true">
-              <span class="enable">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/></svg>
-              </span>
-              <span class="disable">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M4.686 427.314L104 328l-32.922-31.029C55.958 281.851 66.666 256 88.048 256h112C213.303 256 224 266.745 224 280v112c0 21.382-25.803 32.09-40.922 16.971L152 376l-99.314 99.314c-6.248 6.248-16.379 6.248-22.627 0L4.686 449.941c-6.248-6.248-6.248-16.379 0-22.627zM443.314 84.686L344 184l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C234.697 256 224 245.255 224 232V120c0-21.382 25.803-32.09 40.922-16.971L296 136l99.314-99.314c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.248 6.248 6.248 16.379 0 22.627z"/></svg>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div id="searchbox" role="search">
-          <form id="search-form" class="search" style="display: none" action="../search.html" method="get">
-            <input type="search" name="q" placeholder="Search ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-            <button>Go</button>
-          </form>
-        </div>
-      </div>
-    </header>
-    <nav>
-      <a href="cortic_platform.html" class="nav-icon previous" title="previous:&#13;cortic_platform package" aria-label="Previous topic" accesskey="P" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
-      </a>
-      <a href="cortic_platform.sdk.ui.html" class="nav-icon next" title="next:&#13;cortic_platform.sdk.ui package" aria-label="Next topic" accesskey="N" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
-      </a>
-    </nav>
-
-    <nav class="relbar">
-      <a class="previous" href="cortic_platform.html" aria-label="Previous topic" >
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
-        </div>
-        <div class="title">
-          <span class="text">
-            <span class="direction">previous</span>
-            cortic_platform package
-          </span>
-        </div>
-      </a>
-      <a class="next" href="cortic_platform.sdk.ui.html" aria-label="Next topic" >
-        <div class="title">
-          <span class="text">
-            <span class="direction">next</span>
-            cortic_platform.sdk.ui package
-          </span>
-        </div>
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
-        </div>
-      </a>
-    </nav>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cortic_platform.sdk.ui.html" title="cortic_platform.sdk.ui package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cortic_platform.html" title="cortic_platform package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cortic Platform Software Development Kit  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >cortic_platform</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cortic_platform.html" accesskey="U">cortic_platform package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cortic_platform.sdk package</a></li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-<section id="cortic-platform-sdk-package">
+  <section id="cortic-platform-sdk-package">
 <h1>cortic_platform.sdk package<a class="headerlink" href="#cortic-platform-sdk-package" title="Permalink to this heading">¶</a></h1>
 <section id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">¶</a></h2>
@@ -1738,65 +1661,229 @@ connections lists, and sets the StreamingPeer state to its initial state.</p>
 </section>
 </section>
 
+
             <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-
-          <div class="sidebar-resize-handle"></div>
-
-<h3><a href="../index.html">Table of Contents</a></h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">cortic_platform</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="cortic_platform.html">cortic_platform package</a></li>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cortic_platform.sdk package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.app">cortic_platform.sdk.app module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App"><code class="docutils literal notranslate"><span class="pre">App</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.__init__"><code class="docutils literal notranslate"><span class="pre">App.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.get_available_services"><code class="docutils literal notranslate"><span class="pre">App.get_available_services()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.reset_service_state"><code class="docutils literal notranslate"><span class="pre">App.reset_service_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.setup"><code class="docutils literal notranslate"><span class="pre">App.setup()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.process"><code class="docutils literal notranslate"><span class="pre">App.process()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.cleanup"><code class="docutils literal notranslate"><span class="pre">App.cleanup()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app.App.on_exception"><code class="docutils literal notranslate"><span class="pre">App.on_exception()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.app_events">cortic_platform.sdk.app_events module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.SetupError"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.SetupError</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.ProcessError"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.ProcessError</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.TeardownError"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.TeardownError</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.NotSchedulable"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.NotSchedulable</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.NodeExpired"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.NodeExpired</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.CriticalError"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.CriticalError</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.WidgetBuildFailed"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.WidgetBuildFailed</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.ExceptionTypes.TaskTimeout"><code class="docutils literal notranslate"><span class="pre">ExceptionTypes.TaskTimeout</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.AppActions"><code class="docutils literal notranslate"><span class="pre">AppActions</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.AppActions.WaitForSchedule"><code class="docutils literal notranslate"><span class="pre">AppActions.WaitForSchedule</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.AppActions.Continue"><code class="docutils literal notranslate"><span class="pre">AppActions.Continue</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.app_events.AppActions.TerminateApp"><code class="docutils literal notranslate"><span class="pre">AppActions.TerminateApp</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.data_consumer">cortic_platform.sdk.data_consumer module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.data_consumer.DataConsumerMeta"><code class="docutils literal notranslate"><span class="pre">DataConsumerMeta</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.data_consumer.DataConsumer"><code class="docutils literal notranslate"><span class="pre">DataConsumer</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.data_producer">cortic_platform.sdk.data_producer module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.data_producer.DataProducerMeta"><code class="docutils literal notranslate"><span class="pre">DataProducerMeta</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.data_producer.DataProducer"><code class="docutils literal notranslate"><span class="pre">DataProducer</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.logging">cortic_platform.sdk.logging module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.logging.LogLevel"><code class="docutils literal notranslate"><span class="pre">LogLevel</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.logging.LogLevel.Info"><code class="docutils literal notranslate"><span class="pre">LogLevel.Info</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.logging.LogLevel.Warning"><code class="docutils literal notranslate"><span class="pre">LogLevel.Warning</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.logging.LogLevel.Error"><code class="docutils literal notranslate"><span class="pre">LogLevel.Error</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.logging.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.pipeline">cortic_platform.sdk.pipeline module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.PipelineNode"><code class="docutils literal notranslate"><span class="pre">PipelineNode</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.PipelineNode.__init__"><code class="docutils literal notranslate"><span class="pre">PipelineNode.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.PipelineNode.set_input"><code class="docutils literal notranslate"><span class="pre">PipelineNode.set_input()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline"><code class="docutils literal notranslate"><span class="pre">Pipeline</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.__init__"><code class="docutils literal notranslate"><span class="pre">Pipeline.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.set_service_state"><code class="docutils literal notranslate"><span class="pre">Pipeline.set_service_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.get_service_state"><code class="docutils literal notranslate"><span class="pre">Pipeline.get_service_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.reset_service_state"><code class="docutils literal notranslate"><span class="pre">Pipeline.reset_service_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.add_node"><code class="docutils literal notranslate"><span class="pre">Pipeline.add_node()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.remove_node"><code class="docutils literal notranslate"><span class="pre">Pipeline.remove_node()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.add_input_port"><code class="docutils literal notranslate"><span class="pre">Pipeline.add_input_port()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.remove_input_port"><code class="docutils literal notranslate"><span class="pre">Pipeline.remove_input_port()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.get_input_port_names"><code class="docutils literal notranslate"><span class="pre">Pipeline.get_input_port_names()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.add_output_port"><code class="docutils literal notranslate"><span class="pre">Pipeline.add_output_port()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.remove_output_port"><code class="docutils literal notranslate"><span class="pre">Pipeline.remove_output_port()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.get_output_port_names"><code class="docutils literal notranslate"><span class="pre">Pipeline.get_output_port_names()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.send_input_data"><code class="docutils literal notranslate"><span class="pre">Pipeline.send_input_data()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.get_output_data"><code class="docutils literal notranslate"><span class="pre">Pipeline.get_output_data()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.get_all_output_data"><code class="docutils literal notranslate"><span class="pre">Pipeline.get_all_output_data()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.start"><code class="docutils literal notranslate"><span class="pre">Pipeline.start()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.stop"><code class="docutils literal notranslate"><span class="pre">Pipeline.stop()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.pipeline_states">cortic_platform.sdk.pipeline_states module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineState"><code class="docutils literal notranslate"><span class="pre">PipelineState</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineState.Stopped"><code class="docutils literal notranslate"><span class="pre">PipelineState.Stopped</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineState.Running"><code class="docutils literal notranslate"><span class="pre">PipelineState.Running</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineState.FailedToStart"><code class="docutils literal notranslate"><span class="pre">PipelineState.FailedToStart</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineNodeState"><code class="docutils literal notranslate"><span class="pre">PipelineNodeState</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineNodeState.NotAssociated"><code class="docutils literal notranslate"><span class="pre">PipelineNodeState.NotAssociated</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineNodeState.Associating"><code class="docutils literal notranslate"><span class="pre">PipelineNodeState.Associating</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineNodeState.Associated"><code class="docutils literal notranslate"><span class="pre">PipelineNodeState.Associated</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineNodeState.FailedToAssociate"><code class="docutils literal notranslate"><span class="pre">PipelineNodeState.FailedToAssociate</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.service">cortic_platform.sdk.service module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.Service"><code class="docutils literal notranslate"><span class="pre">Service</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.Service.__init__"><code class="docutils literal notranslate"><span class="pre">Service.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.Service.activate"><code class="docutils literal notranslate"><span class="pre">Service.activate()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.Service.process"><code class="docutils literal notranslate"><span class="pre">Service.process()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.Service.deactivate"><code class="docutils literal notranslate"><span class="pre">Service.deactivate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.streaming_peer">cortic_platform.sdk.streaming_peer module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeerConnection"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnection</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeerConnection.__init__"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnection.__init__()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer"><code class="docutils literal notranslate"><span class="pre">StreamingPeer</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.__init__"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.make_connection_request"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.make_connection_request()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.terminate_connection"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.terminate_connection()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.accept_connection_requests"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.accept_connection_requests()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_connection_requests"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.refuse_connection_requests()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.categorize_track_routing_rules"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.categorize_track_routing_rules()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.parse_ice_func"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.parse_ice_func()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.reset"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.reset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.streaming_states">cortic_platform.sdk.streaming_states module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType"><code class="docutils literal notranslate"><span class="pre">ConnectionType</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType.Incoming"><code class="docutils literal notranslate"><span class="pre">ConnectionType.Incoming</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType.Outgoing"><code class="docutils literal notranslate"><span class="pre">ConnectionType.Outgoing</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState.AwaitIncomingConnection"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState.AwaitIncomingConnection</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState.RefuseIncomingConnection"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState.RefuseIncomingConnection</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState.NotAbleToSignal"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState.NotAbleToSignal</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState.NetworkError"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState.NetworkError</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.New"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.New</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.Connecting"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.Connecting</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.Connected"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.Connected</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.Disconnecting"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.Disconnecting</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.Disconnected"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.Disconnected</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.Failed"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.Failed</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerConnectionState.NetworkError"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnectionState.NetworkError</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
-<div><hr class="docutils"></div>
-<ul>
-  <li class="toctree-l1"><a class="reference internal" href="../genindex.html" accesskey="I">General Index</a></li>
-  <li class="toctree-l1"><a class="reference internal" href="../py-modindex.html">Python Module Index</a></li>
-</ul>
-<div id="ethical-ad-placement"></div>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cortic_platform.html"
+                          title="previous chapter">cortic_platform package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cortic_platform.sdk.ui.html"
+                          title="next chapter">cortic_platform.sdk.ui package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/cortic_platform.sdk.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-
-    <nav class="relbar">
-      <a class="previous" href="cortic_platform.html" aria-label="Previous topic" >
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
-        </div>
-        <div class="title">
-          <span class="text">
-            <span class="direction">previous</span>
-            cortic_platform package
-          </span>
-        </div>
-      </a>
-      <a class="next" href="cortic_platform.sdk.ui.html" aria-label="Next topic" >
-        <div class="title">
-          <span class="text">
-            <span class="direction">next</span>
-            cortic_platform.sdk.ui package
-          </span>
-        </div>
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
-        </div>
-      </a>
-    </nav>
-
-    <footer role="contentinfo">
-      &#169; Copyright 2023, Cortic Technology Corp..
-      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
-      <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
-<a class="reference internal" href="../_sources/source/cortic_platform.sdk.rst.txt" rel="nofollow">Show Source</a>.
-    </footer>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cortic_platform.sdk.ui.html" title="cortic_platform.sdk.ui package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cortic_platform.html" title="cortic_platform package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cortic Platform Software Development Kit  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >cortic_platform</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="cortic_platform.html" >cortic_platform package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cortic_platform.sdk package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Cortic Technology Corp.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
   </body>
 </html>
