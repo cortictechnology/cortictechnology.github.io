@@ -19,11 +19,36 @@
     <p>Begin by ensuring you have the latest version of VSCode installed on your machine.</p>
     <ol>
         <li>Download and install VSCode from the official website if you haven't already.</li>
-        <li>Open VSCode and navigate to the extensions section. Ensure you have the "code command" extension installed.
+        <li>Ensure you have the "code" command installed to your system's PATH.
+            <ul>
+                <br>
+                <li>For macOS, please follow the instructions <a
+                        href="https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line">here</a>.
+                </li>
+                <li>For Windows, the "code" command is automatically installed with VSCode. </li>
+                <li>For Linux, the "code" command is also automatically installed with VSCode. </li>
+            </ul>
         </li>
-        <li>After installation, ensure that you add the "code" command to your system's PATH.</li>
+        <li>After installation, ensure that you add the "code" command to your system's PATH.
+            <ul>
+                <br>
+                <li>For macOS, enter the commen <code>which code</code> in the terminal. The command should return a
+                    path.</li>
+                <div class="screenshot"><img src="./assets/first_app/vscode_path_mac.png"></div>
+                <li>For Windows, enter the command <code>where code</code> in the command line tool.The command should
+                    return two paths, one of which is just a shortcut to the other.
+                </li>
+                <div class="screenshot"><img src="./assets/first_app/vscode_path_windows.png"></div>
+                <li>For Linux, enter the commen <code>which code</code> in the terminal. The command should return a
+                    path.</li>
+                <div class="screenshot"><img src="./assets/first_app/vscode_path_ubuntu.png"></div>
+            </ul>
+        </li>
+        <li>
+            Copy and paste the "code" path obtained above into the Cortic AI Hub's settings menu.
+        </li>
+        <div class="screenshot"><img src="./assets/first_app/vscode_settings.png"></div>
     </ol>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
     <h2>2. Create a New App</h2>
     <p>From the Dev Portal, select the option to create a new app. Follow the prompts to name and configure your app's
