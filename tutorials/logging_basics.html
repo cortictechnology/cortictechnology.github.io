@@ -66,18 +66,23 @@
     <p>All logging outputs are also systematically written and stored within the system's filesystem. To find these log
         files:</p>
     <ol>
-        <li>Access the system's application support directory of the Cortic AI Hub.</li>
-        <li>Navigate to the <code>logs</code> sub-directory.</li>
-        <li>Here, you'll find log files categorized based on their sources, such as apps, devices, or services.</li>
+        <li>After pressing the "Save console log" button in any of the console view, the Cortic AI Hub will save the
+            log file to the filesystem. A message will be displayed with a clickable link (the blue "here" text) to the
+            log file.</li>
+        <div class="screenshot"><img src="./assets/logging_basics/saved_console_log_message.png"></div>
+        <li>Click on the link to open the folder containing the log files.</li>
+        <li>Here, you'll find the log file that was just saved.</li>
+        <div class="screenshot"><img src="./assets/logging_basics/saved_console_log_folder.png"></div>
     </ol>
 
-    <div class="screenshot"><img src="./assets/logging_basics/log_files.png"></div>
+
 
     <h2>5. The Master Log</h2>
 
     <p>The master log is an aggregate log that combines messages from the entire hub, inclusive of all apps, devices,
         and services. It serves as a consolidated record for all logging activities. You can view the master log from
         the Setting menu from the Cortic AI Hub's system tray icon.</p>
+    <div class="screenshot"><img src="./assets/logging_basics/open_master_log.png"></div>
     <div class="screenshot"><img src="./assets/logging_basics/master_log.png"></div>
     <h2>6. Importance of Logging</h2>
 
