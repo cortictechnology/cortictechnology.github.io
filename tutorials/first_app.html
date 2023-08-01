@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cortic Platform: App Creation Guide</title>
     <link rel="stylesheet" href="cortic_styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css" />
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/languages/javascript.min.js"></script>
+    </script>
 </head>
 
 <body>
-
+    <script>hljs.highlightAll();</script>
     <h1>Creating Your First App</h1>
 
     <p>Welcome to the guide on creating your first app on the Cortic Platform. Follow the steps below to ensure a smooth
@@ -45,7 +50,7 @@
             </ul>
         </li>
         <li>
-            Copy and paste the "code" path obtained above into the Cortic AI Hub's settings menu.
+            Copy and paste the "code" path obtained above into the Cortic AI Hub's Settings menu.
         </li>
         <div class="screenshot"><img src="./assets/first_app/vscode_settings.png"></div>
     </ol>
@@ -54,57 +59,151 @@
     <p>From the Dev Portal, select the option to create a new app. Follow the prompts to name and configure your app's
         initial settings.</p>
     <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
+    <p>If you have finished setting up the VSCode path from the previous step, you can press the "Edit App" button to
+        open the app in VSCode.</p>
     <h2>3. Understanding the App Directory Structure</h2>
     <p>The app directory is structured in a specific way to facilitate seamless development. Here is a brief overview:
     </p>
     <ul>
-        <li><strong>Manifest File:</strong> This file contains metadata about your app. You will need to edit this to
+        <li><strong>Manifest File (manifest.json):</strong> This file contains metadata about your app. You will need to
+            edit this to
             provide specifics about your application.</li>
-        <li><strong>Icons:</strong> Your apps default icon is in the asset folder. You may replace it with your own
+        <li><strong>Icons:</strong> Your apps default icon is in the assets folder. You may replace it with your own
             icon. Your icon should be 100px by 100px in .png format.</li>
-        <li><strong>Source Code:</strong> This is where the main logic of your app resides. You app should inherit from
+        <li><strong>Conda Environment Setup File (environment.yml):</strong> This file contains the list of dependencies
+            required by your
+            app. You may add additional dependencies to this file. We strongly recommend you to not use any platform
+            specific dependencies in an App. </li>
+        <li><strong>Source Code (app_main.py):</strong> This is where the main logic of your app resides. You app should
+            inherit from
             the App class and implement several methods: <code>setup</code>, <code>process</code>,
             <code>teardown</code>, and <code>on_exception</code>.
         </li>
     </ul>
 
     The following sample code illustrates how to do this.
+    <pre><code class="language-python">
+        # app_main.py
 
-    <p><code>sample code</code></p>
+        from cortic_platform.sdk import App # Import the App class from the SDK
+        from cortic_platform.sdk.ui.basic_widgets import Container, Image # Import some basic widgets
+        from cortic_platform.sdk.app_events import ExceptionTypes # Import the ExceptionTypes enum
+        from cortic_platform.sdk.logging import log, LogLevel # Import the log function and LogLevel enum
+        from service_registry import *
+        
+        # Uncomment the following lines to enable debugpy so that you can attach a debugger to the app
+        # in VSCode. A vscode configuration is already provided in the .vscode folder. You will need to
+        # make sure the port in the vscode configuration is the same as the one specified in the
+        # debugpy.listen() call.
+        
+        # import debugpy
+        # debugpy.listen(("0.0.0.0", 5678))
+        
+        APP_WIDTH=1280 # Specify the width of the app
+        APP_HEIGHT=720 # Specify the height of the app
+        
+        # Create a new app class that inherits from the App class
+        class MyFirstApp(App):
+            def __init__(self):
+                super().__init__()
+        
+
+            def setup(self):
+                self.background_container = Container([0, 0, APP_WIDTH, APP_HEIGHT])
+                self.background_container.background = "#181923"
+        
+                self.video_frame = Image(
+                    [APP_WIDTH * 0.3 / 2, APP_HEIGHT * 0.3 / 2, APP_WIDTH * 0.7, APP_HEIGHT * 0.7],
+                    scaling_method="fit",
+                )
+        
+                self.background_container.children.append(self.video_frame)
+                
+                self.widget_tree.add(self.background_container)
+                self.widget_tree.build()
+        
+
+            def process(self):
+                frame_data = video_capture({"grey_scale": False}, 
+                                           service_states={"video_file": "/Users/michael/Downloads/video.mov"})
+                task_data = None
+                if frame_data is not None:
+                    face_detection_data = face_landmarks({"camera_input": frame_data,
+                                                          "draw_landmarks": True})
+                    if face_detection_data is not None:
+                        task_data = face_detection_data.get_data()
+                if task_data and task_data is not ExceptionTypes:
+                    self.video_frame.update_image(task_data["frame"])
+                self.widget_tree.update()
+        
+                
+            def on_exception(self, exception, exception_data=None):
+                log("Exception occurred: " + str(exception_data), log_level=LogLevel.Error)
+        
+
+            def teardown(self):
+                log("Tearing down the App", log_level=LogLevel.Info)
+        </code></pre>
 
     <p>Here is an explanation of what each method of the above code does.</p>
 
-    <h2>4. Importing the face_landmarks Service</h2>
-    <p>Head over to the Store and search for the "face_landmarks" service. Follow the instructions to import it into
-        your app.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    <ul>
+        <li><strong>setup:</strong> This method is called once when the app is started. You can use this method to
+            initialize any variables or widgets that you may need. In the above example, we initialize a background
+            container and an image widget. We also add the image widget to the background container and add the
+            background container to the widget tree. Finally, we call the build method of the widget tree to build the
+            App's UI.</li>
+        <li><strong>process:</strong> This method is called repeatedly while the app is running. You can use this
+            method to perform any processing on the data that you receive from the services. In the above example, we
+            call the video_capture service to get a frame from the video file and then call the face_landmarks service
+            to detect facial landmarks in the frame. Notice that we pass the frame data from the video_capture service
+            to the face_landmarks service. This is how you can chain services together. Finally, we update the image
+            widget with the frame data returned by the face_landmarks service.</li>
+        <li><strong>on_exception:</strong> This method is called when an exception occurs. You can use this method to
+            handle exceptions. In the above example, we log the exception.</li>
+        <li><strong>teardown:</strong> This method is called once when the app is stopped. You can use this method to
+            perform any cleanup operations. In the above example, we log a message to indicate that the app is being
+            torn down.</li>
 
-    <h2>5. Inspecting the service_registry.py File</h2>
-    <p>Once you've imported the service, you can find its autogenerated wrapper function by inspecting the
-        <code>service_registry.py</code> file. Note down the function name as you'll use it in your app.
-    </p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
-    <h2>6. Running the App and Inspecting Logs</h2>
-    <p>Run your app using the provided execution command. To troubleshoot or get insights into the application's
-        performance, open the console window and inspect the logs.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+        <h2>4. Importing some Services</h2>
+        <p>Head over to the Store and search for the "Video Capture" and "Face Landmarks" services. Follow the
+            instructions shown in the screenshots below to import the services into your app.</p>
+        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
-    <h2>7. Checking the Device Page</h2>
-    <p>Visit the device page to view the current status of the face_landmarks service. This gives a real-time update on
-        its performance and any detected landmarks.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-    </section>
+        <h2>5. Inspecting the service_registry.py File</h2>
+        <p>Once you've imported the service, you can find its autogenerated wrapper function by inspecting the
+            <code>service_registry.py</code> file. Note that the function name is the same as the ones you see in the
+            <code>app_main.py</code> file shown above. This is how you can call the services from your app. You can pass
+            the parameters to the service in a dictionary when calling the function. The keys of the dictionary are the
+            names of the parameters and the values are the values of the parameters.
+        </p>
+        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
-    <section>
-        <h2>Next Steps</h2>
-        <p>Now that you have set up your first app on the Cortic Platform, you might want to explore the following:</p>
-        <ul>
-            <li>Deep dive into advanced functionalities offered by our SDK.</li>
-            <li>Integrate additional services to enhance your app's capabilities.</li>
-            <li>Join our developer community forums to share your experiences and gain insights from peers.</li>
-        </ul>
+        <h2>6. Running the App and Inspecting Logs</h2>
+        <p>Run your app by pressing the "Run" button. You should see the video playing in the app window. You should
+            also see the facial landmarks being detected in the video frame. To troubleshoot or get insights into the
+            application's performance, open the console window and inspect the logs.</p>
+        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+
+        <h2>7. Checking the Device Page</h2>
+        <p>Visit the device page to view the current status of the Services being used by the app. You should see the
+            Video Capture and Face Landmarks services are in the "Processing" state. This means that the services are
+            currently being used by the app. You can also view the logs for each service on the device page.</p>
+
+        <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+        </section>
+
+        <section>
+            <h2>Next Steps</h2>
+            <p>Now that you have set up your first app on the Cortic Platform, you might want to explore the
+                following:
+            </p>
+            <ul>
+                <li>Deep dive into advanced functionalities offered by our SDK.</li>
+                <li>Integrate additional services to enhance your app's capabilities.</li>
+                <li>Join our developer community forums to share your experiences and gain insights from peers.</li>
+            </ul>
 
 </body>
 
