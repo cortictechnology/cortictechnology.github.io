@@ -15,22 +15,47 @@
 
 <body>
 
-    <h1>Creating a New Service</h1>
+    <h1>Creating Your Service</h1>
     <p>This guide aims to instruct developers on creating a new service by subclassing from the base "Service" class
         available in the Cortic Platform SDK.</p>
 
-    <h2>Overview</h2>
+    <h2>1. Create a New Service</h2>
+    <ol>
+        <li>Click the "Add Service" button in the Service panel of an App of your choice.</li>
+        <li>Follow the prompts to name and configure your service's initial settings. Note that the
+            Programming Handle is the name of the service invoking function that you can use in your code.</li>
+        <li>Click "Add" to create the service.</li>
+        <li>If you have finished setting up the VSCode path, you can press the "Edit Service" button to
+            open the service's source code in VSCode.</li>
+    </ol>
+
+    <h2>2. Service Class Overview</h2>
     <p>For effective integration into the Cortic Platform, it is crucial for your service to implement three core
         methods:</p>
     <ul>
-        <li><code>activate</code></li>
-        <li><code>process</code></li>
-        <li><code>deactivate</code></li>
+        <li><code>activate</code>
+            <ul>
+                <li>This method is called when the service is activated. It is responsible for initializing the service
+                    and loading any required resources.</li>
+            </ul>
+        </li>
+        <li><code>process</code>
+            <ul>
+                <li>This method is called when the service is invoked. It is responsible for processing the input and
+                    returning the output.</li>
+            </ul>
+        </li>
+        <li><code>deactivate</code>
+            <ul>
+                <li>This method is called when the service is deactivated. It is responsible for cleaning up any
+                    resources and shutting down the service.</li>
+            </ul>
+        </li>
     </ul>
 
     <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
 
-    <h2>Platform Independent Services</h2>
+    <h2>3. Platform Independent Services</h2>
     <p>Developing a service that remains independent of the underlying platform provides flexibility and broadens
         compatibility. There are three primary methods to achieve this:</p>
 
@@ -46,7 +71,7 @@
     <p>Edit the <code>requirements.txt</code> to add conditional requirements specific to each platform. Additionally,
         detect the current platform within your application to execute tasks that are platform-specific.</p>
 
-    <h2>Sample Service: Face Detection</h2>
+    <h2>3. Sample Service: Face Detection</h2>
     <p>To better understand the creation of a generic service, let's examine a face detection service for each of the
         scenarios mentioned above:</p>
 
