@@ -61,39 +61,84 @@
 
     <h3>1. Using Main Processor for Computations</h3>
     <p>By focusing on the main processor for all computations, you eschew the need for specialized hardware. This
-        ensures a generic compatibility across platforms.</p>
+        ensures a generic compatibility across platforms. The downside is that the performance may be suboptimal.</p>
 
     <h3>2. Leveraging Python Packages</h3>
     <p>Python packages such as PyTorch can support multiple backends. By utilizing such a package, you can abstract away
         the specifics of the backend and ensure your service works seamlessly across various platforms.</p>
 
-    <h3>3. Conditional Requirements in <code>requirements.txt</code></h3>
-    <p>Edit the <code>requirements.txt</code> to add conditional requirements specific to each platform. Additionally,
-        detect the current platform within your application to execute tasks that are platform-specific.</p>
+    <h3>3. Conditional Requirements in <code>environment.yml</code></h3>
+    <p>Edit the pip requirements section of <code>environment.yml</code> to add conditional requirements specific to
+        each platform. This allows
+        you to specify the requirements for each platform and ensure that only the relevant requirements are installed.
+        In addition to this, you also need to detect the current platform within your
+        service's running code to execute the relevant tasks.</p>
 
     <h2>3. Sample Service: Face Detection</h2>
     <p>To better understand the creation of a generic service, let's examine a face detection service for each of the
         scenarios mentioned above:</p>
 
     <h3>1. Main Processor-Based Face Detection</h3>
-    <p>Detail the steps and logic of utilizing the main processor for face detection. Highlight any challenges or
-        nuances specific to this approach.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    <p>To illustrate the use of the main processor for computations, we will use Google's MediaPipe Face Detection
+        package. This package is compatible with both the CPU and GPU, and we will use the CPU version for this
+        example.</p>
 
     <h3>2. PyTorch Backend-Based Face Detection</h3>
-    <p>Illustrate how PyTorch or similar packages can be used to abstract backend specifics and develop a face detection
-        service that remains platform independent.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
-
+    <p>To illustrate the use of a Python package that supports multiple backends, we will create a service based on the
+        BlazeFace project by <a href="https://github.com/hollance/BlazeFace-PyTorch" target="_blank">hollance</a>. This
+        project uses PyTorch as the underlying framework and supports multiple backends, including CPU, GPU, and Apple's
+        MPS.
+    </p>
     <h3>3. Conditional Requirements-Based Face Detection</h3>
-    <p>Explain how to structure the <code>requirements.txt</code> for platform-specific needs and how to detect the
-        current platform within the application to execute relevant tasks.</p>
-    <div class="screenshot-placeholder">&lt;screenshot&gt;</div>
+    <p>To illustrate the use of conditional requirements, we will create a service that uses Google's MediaPipe Face
+        Detection package for Linux and Windows, but uses a CoreML Blazeface model for macOS. This means that the
+        we will need to add the following lines to the pip requirements section of the <code>environment.yml</code>
+        file:</p>
+    <pre><code class="language-python">mediapipe; sys_platform == "linux" or sys_platform == "win32"
+coremltools; sys_platform == "darwin"
+</code></pre>
+    <p> The <code>environment.yml</code> file should now look like this:</p>
+    <pre><code class="language-python">name: cortic-face-detection
+channels:
+    - defaults
+    - anaconda
+    - conda-forge
+dependencies:
+    - python=3.9
+    - pip
+    - pip:
+        - numpy
+        - opencv-python
+        - mediapipe; sys_platform == "linux" or sys_platform == "win32"
+        - coremltools; sys_platform == "darwin"
+</code></pre>
+    <p>Then, we will need to detect the current platform within the service's running code to execute the relevant
+        tasks. This can be done using the <code>platform</code> module:</p>
+    <pre><code class="language-python">import platform
+
+if platform.system() == "Darwin":
+    # macOS
+    # Use CoreML Blazeface model
+else:
+    # Linux or Windows
+    # Use MediaPipe Face Detection package
+</code></pre>
+
+    <p> The entire code for the face detection service is shown below:</p>
+
+    <h3>4. Deploying the Face Detection Service</h3>
+    <p>Once you have finished creating the service, you can deploy it to your devices by following the steps
+        below:</p>
+    <ol>
+        <li>Click the "Deploy" button in the Service panel of the App of your choice.</li>
+        <li>Once the service has been deployed, you can see the service's status in the Device page.</li>
+    </ol>
 
     <h2>Next Steps</h2>
     <p>Now that you have successfully created a service:</p>
     <ul>
         <li>Consider optimizing the service for better performance.</li>
+        <li>Explore the Cortic Platform SDK to create more advanced services.</li>
         <li>Explore integrating additional functionalities to enhance the service capabilities.</li>
         <li>Look into the advanced features of the Cortic Platform SDK for more sophisticated implementations.</li>
     </ul>
