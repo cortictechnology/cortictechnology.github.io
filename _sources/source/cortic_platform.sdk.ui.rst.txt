@@ -51,3 +51,11 @@ cortic\_platform.sdk.ui.widget\_tree module
    :members:
    :undoc-members:
    :show-inheritance:
+
+cortic\_platform.sdk.ui.visualization\_utils module
+---------------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.visualization_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
