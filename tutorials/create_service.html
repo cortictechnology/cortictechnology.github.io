@@ -77,9 +77,19 @@
         you to specify the requirements for each platform and ensure that only the relevant requirements are installed.
         In addition to this, you also need to detect the current platform within your
         service's running code to execute the relevant tasks.</p>
+    <h3>4. Platform Dependent Packages</h3>
+    <p>If your service requires packages that are only available on a specific platform, but cannot be installed
+        using the methods mentioned above, you can use the post_conda_env_creation.py script to install the
+        packages. This script is executed after the conda environment is created, and can be used to perform
+        additional tasks such as installing packages that are not available on PyPI or conda-forge. Or you can
+        use it to install packages that require additional steps to install, such as installing a package from a
+        local file. When you create a new service, the post_conda_env_creation.py script is automatically
+        created for you. You should perform the detection of the current platform within this script before
+        installing the relevant packages.</p>
 
-    <h2>3. Sample Service: Face Detection</h2>
-    <p>To better understand the creation of a generic service, let's examine a face detection service for each of the
+    <h2>4. Sample Service: Face Detection</h2>
+    <p>To better understand the creation of a generic service, let's examine a face detection service for each of
+        the
         scenarios mentioned above:</p>
 
     <h3>1. Main Processor-Based Face Detection</h3>
@@ -168,9 +178,12 @@
             target="_blank">here</a>.</p>
 
     <h3>2. PyTorch Backend-Based Face Detection</h3>
-    <p>To illustrate the use of a Python package that supports multiple backends, we will create a service based on the
-        BlazeFace project by <a href="https://github.com/hollance/BlazeFace-PyTorch" target="_blank">hollance</a>. This
-        project uses PyTorch as the underlying framework and supports multiple backends, including CPU, GPU, and Apple's
+    <p>To illustrate the use of a Python package that supports multiple backends, we will create a service based on
+        the
+        BlazeFace project by <a href="https://github.com/hollance/BlazeFace-PyTorch" target="_blank">hollance</a>.
+        This
+        project uses PyTorch as the underlying framework and supports multiple backends, including CPU, GPU, and
+        Apple's
         MPS.
     </p>
     <p>First, we will need to add the following lines to the pip requirements section of the
