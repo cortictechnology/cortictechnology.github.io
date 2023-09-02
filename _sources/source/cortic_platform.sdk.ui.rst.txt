@@ -28,6 +28,14 @@ cortic\_platform.sdk.ui.misc\_widgets module
    :undoc-members:
    :show-inheritance:
 
+cortic\_platform.sdk.ui.chart\_widgets module
+---------------------------------------------
+
+.. automodule:: cortic_platform.sdk.ui.chart_widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 cortic\_platform.sdk.ui.viewer\_widgets module
 ----------------------------------------------
 

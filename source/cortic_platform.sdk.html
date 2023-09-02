@@ -55,7 +55,11 @@
 <li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.basic_widgets">cortic_platform.sdk.ui.basic_widgets module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container"><code class="docutils literal notranslate"><span class="pre">Container</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.__init__"><code class="docutils literal notranslate"><span class="pre">Container.__init__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.remove"><code class="docutils literal notranslate"><span class="pre">Container.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.num_children"><code class="docutils literal notranslate"><span class="pre">Container.num_children()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.add_child"><code class="docutils literal notranslate"><span class="pre">Container.add_child()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.add_children"><code class="docutils literal notranslate"><span class="pre">Container.add_children()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.remove_child"><code class="docutils literal notranslate"><span class="pre">Container.remove_child()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Container.clear_children"><code class="docutils literal notranslate"><span class="pre">Container.clear_children()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Label"><code class="docutils literal notranslate"><span class="pre">Label</span></code></a><ul>
@@ -70,8 +74,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Image"><code class="docutils literal notranslate"><span class="pre">Image</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Image.__init__"><code class="docutils literal notranslate"><span class="pre">Image.__init__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Image.update_image"><code class="docutils literal notranslate"><span class="pre">Image.update_image()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Image.update_data"><code class="docutils literal notranslate"><span class="pre">Image.update_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Image.set_data"><code class="docutils literal notranslate"><span class="pre">Image.set_data()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.basic_widgets.Image.clear_data"><code class="docutils literal notranslate"><span class="pre">Image.clear_data()</span></code></a></li>
 </ul>
 </li>
@@ -88,23 +92,22 @@
 <li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.input_widgets">cortic_platform.sdk.ui.input_widgets module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField"><code class="docutils literal notranslate"><span class="pre">TextField</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField.__init__"><code class="docutils literal notranslate"><span class="pre">TextField.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField.toggle_obscure_text"><code class="docutils literal notranslate"><span class="pre">TextField.toggle_obscure_text()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField.set_data"><code class="docutils literal notranslate"><span class="pre">TextField.set_data()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField.get_data"><code class="docutils literal notranslate"><span class="pre">TextField.get_data()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField.toggle_obscure_text"><code class="docutils literal notranslate"><span class="pre">TextField.toggle_obscure_text()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TextField.clear_data"><code class="docutils literal notranslate"><span class="pre">TextField.clear_data()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButton"><code class="docutils literal notranslate"><span class="pre">RadioButton</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButton.__init__"><code class="docutils literal notranslate"><span class="pre">RadioButton.__init__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButton.set_data"><code class="docutils literal notranslate"><span class="pre">RadioButton.set_data()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButton.clear_data"><code class="docutils literal notranslate"><span class="pre">RadioButton.clear_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButtonList"><code class="docutils literal notranslate"><span class="pre">RadioButtonList</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButtonList.__init__"><code class="docutils literal notranslate"><span class="pre">RadioButtonList.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.RadioButtonList.clear_data"><code class="docutils literal notranslate"><span class="pre">RadioButtonList.clear_data()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownMenu"><code class="docutils literal notranslate"><span class="pre">DropdownMenu</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownMenu.__init__"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.__init__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownMenu.set_selected_item"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.set_selected_item()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownMenu.set_data"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.set_data()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownMenu.clear_data"><code class="docutils literal notranslate"><span class="pre">DropdownMenu.clear_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownList"><code class="docutils literal notranslate"><span class="pre">DropdownList</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownList.__init__"><code class="docutils literal notranslate"><span class="pre">DropdownList.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownList.set_selected_item"><code class="docutils literal notranslate"><span class="pre">DropdownList.set_selected_item()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownList.set_data"><code class="docutils literal notranslate"><span class="pre">DropdownList.set_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.DropdownList.clear_data"><code class="docutils literal notranslate"><span class="pre">DropdownList.clear_data()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.PinPut"><code class="docutils literal notranslate"><span class="pre">PinPut</span></code></a><ul>
@@ -134,34 +137,62 @@
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.ListView"><code class="docutils literal notranslate"><span class="pre">ListView</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.ListView.__init__"><code class="docutils literal notranslate"><span class="pre">ListView.__init__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.ListView.set_data"><code class="docutils literal notranslate"><span class="pre">ListView.set_data()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.ListView.set_selected_idx"><code class="docutils literal notranslate"><span class="pre">ListView.set_selected_idx()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.ListView.clear_data"><code class="docutils literal notranslate"><span class="pre">ListView.clear_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.ListView.set_selected_item"><code class="docutils literal notranslate"><span class="pre">ListView.set_selected_item()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TabBar"><code class="docutils literal notranslate"><span class="pre">TabBar</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TabBar.__init__"><code class="docutils literal notranslate"><span class="pre">TabBar.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.TabBar.set_selected_item"><code class="docutils literal notranslate"><span class="pre">TabBar.set_selected_item()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList"><code class="docutils literal notranslate"><span class="pre">CheckboxList</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList.__init__"><code class="docutils literal notranslate"><span class="pre">CheckboxList.__init__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList.set_data"><code class="docutils literal notranslate"><span class="pre">CheckboxList.set_data()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList.update_data_list"><code class="docutils literal notranslate"><span class="pre">CheckboxList.update_data_list()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList.clear_data"><code class="docutils literal notranslate"><span class="pre">CheckboxList.clear_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList.set_item_value"><code class="docutils literal notranslate"><span class="pre">CheckboxList.set_item_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.input_widgets.CheckboxList.update_data_list"><code class="docutils literal notranslate"><span class="pre">CheckboxList.update_data_list()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.misc_widgets">cortic_platform.sdk.ui.misc_widgets module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.Meter"><code class="docutils literal notranslate"><span class="pre">Meter</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.Meter.__init__"><code class="docutils literal notranslate"><span class="pre">Meter.__init__()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.LivePlot"><code class="docutils literal notranslate"><span class="pre">LivePlot</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.LivePlot.__init__"><code class="docutils literal notranslate"><span class="pre">LivePlot.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.CircularCounter"><code class="docutils literal notranslate"><span class="pre">CircularCounter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.CircularCounter.__init__"><code class="docutils literal notranslate"><span class="pre">CircularCounter.__init__()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.CircularLoader"><code class="docutils literal notranslate"><span class="pre">CircularLoader</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.misc_widgets.CircularLoader.__init__"><code class="docutils literal notranslate"><span class="pre">CircularLoader.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.chart_widgets">cortic_platform.sdk.ui.chart_widgets module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient"><code class="docutils literal notranslate"><span class="pre">Gradient</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Autumn"><code class="docutils literal notranslate"><span class="pre">Gradient.Autumn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Summer"><code class="docutils literal notranslate"><span class="pre">Gradient.Summer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Winter"><code class="docutils literal notranslate"><span class="pre">Gradient.Winter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Spring"><code class="docutils literal notranslate"><span class="pre">Gradient.Spring</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Rainbow"><code class="docutils literal notranslate"><span class="pre">Gradient.Rainbow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Plasma"><code class="docutils literal notranslate"><span class="pre">Gradient.Plasma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.Gradient.Custom"><code class="docutils literal notranslate"><span class="pre">Gradient.Custom</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.BaseChart"><code class="docutils literal notranslate"><span class="pre">BaseChart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.BaseChart.__init__"><code class="docutils literal notranslate"><span class="pre">BaseChart.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.BaseChart.update_data"><code class="docutils literal notranslate"><span class="pre">BaseChart.update_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.LineChart"><code class="docutils literal notranslate"><span class="pre">LineChart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.LineChart.__init__"><code class="docutils literal notranslate"><span class="pre">LineChart.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.LineChart.set_domain"><code class="docutils literal notranslate"><span class="pre">LineChart.set_domain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.LineChart.set_range"><code class="docutils literal notranslate"><span class="pre">LineChart.set_range()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.LineChart.set_data"><code class="docutils literal notranslate"><span class="pre">LineChart.set_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.PieChart"><code class="docutils literal notranslate"><span class="pre">PieChart</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.PieChart.__init__"><code class="docutils literal notranslate"><span class="pre">PieChart.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.chart_widgets.PieChart.set_data"><code class="docutils literal notranslate"><span class="pre">PieChart.set_data()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -179,9 +210,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.widget">cortic_platform.sdk.ui.widget module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.WidgetState"><code class="docutils literal notranslate"><span class="pre">WidgetState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.WidgetState.Created"><code class="docutils literal notranslate"><span class="pre">WidgetState.Created</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.WidgetState.Built"><code class="docutils literal notranslate"><span class="pre">WidgetState.Built</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.WidgetState.FailedToBuild"><code class="docutils literal notranslate"><span class="pre">WidgetState.FailedToBuild</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.Widget"><code class="docutils literal notranslate"><span class="pre">Widget</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.Widget.__init__"><code class="docutils literal notranslate"><span class="pre">Widget.__init__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.Widget.update_data"><code class="docutils literal notranslate"><span class="pre">Widget.update_data()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.Widget.set_data"><code class="docutils literal notranslate"><span class="pre">Widget.set_data()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.Widget.get_data"><code class="docutils literal notranslate"><span class="pre">Widget.get_data()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget.Widget.clear_data"><code class="docutils literal notranslate"><span class="pre">Widget.clear_data()</span></code></a></li>
@@ -192,19 +228,17 @@
 <li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.widget_tree">cortic_platform.sdk.ui.widget_tree module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree"><code class="docutils literal notranslate"><span class="pre">WidgetTree</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.__init__"><code class="docutils literal notranslate"><span class="pre">WidgetTree.__init__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.add"><code class="docutils literal notranslate"><span class="pre">WidgetTree.add()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.set_target"><code class="docutils literal notranslate"><span class="pre">WidgetTree.set_target()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.get_widget_with_alias"><code class="docutils literal notranslate"><span class="pre">WidgetTree.get_widget_with_alias()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.add_child"><code class="docutils literal notranslate"><span class="pre">WidgetTree.add_child()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.remove_child"><code class="docutils literal notranslate"><span class="pre">WidgetTree.remove_child()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.set_rendering_target"><code class="docutils literal notranslate"><span class="pre">WidgetTree.set_rendering_target()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.build"><code class="docutils literal notranslate"><span class="pre">WidgetTree.build()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.update"><code class="docutils literal notranslate"><span class="pre">WidgetTree.update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree.get_widget_with_alias"><code class="docutils literal notranslate"><span class="pre">WidgetTree.get_widget_with_alias()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cortic_platform.sdk.ui.html#module-cortic_platform.sdk.ui.visualization_utils">cortic_platform.sdk.ui.visualization_utils module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.visualization_utils.get_default_pose_landmarks_style"><code class="docutils literal notranslate"><span class="pre">get_default_pose_landmarks_style()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.visualization_utils.get_default_face_mesh_contours_style"><code class="docutils literal notranslate"><span class="pre">get_default_face_mesh_contours_style()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.visualization_utils.get_default_face_mesh_iris_connections_style"><code class="docutils literal notranslate"><span class="pre">get_default_face_mesh_iris_connections_style()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.visualization_utils.decode_jpeg"><code class="docutils literal notranslate"><span class="pre">decode_jpeg()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.visualization_utils.encode_jpeg"><code class="docutils literal notranslate"><span class="pre">encode_jpeg()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.visualization_utils.draw_disconnected_rect"><code class="docutils literal notranslate"><span class="pre">draw_disconnected_rect()</span></code></a></li>
@@ -245,12 +279,8 @@ running loop where the process method is called repeatedly. The App class has an
 method for handling exceptions that might occur during the app’s lifecycle. It supports various
 exception types, and subclasses can override this method to provide custom exception handling.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>app_manager</strong> (<em>AppManager</em>) – The AppManager instance that manages this App.</p></li>
-<li><p><strong>device_list</strong> (<em>dict</em>) – The latest device map received from the Cortic Platform Runtime.</p></li>
-<li><p><strong>ui</strong> (<em>UserInterface</em>) – Developer can use this to contruct the user interface of the App.</p></li>
-</ul>
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget_tree</strong> (<a class="reference internal" href="cortic_platform.sdk.ui.html#cortic_platform.sdk.ui.widget_tree.WidgetTree" title="cortic_platform.sdk.ui.widget_tree.WidgetTree"><em>WidgetTree</em></a>) – The widget tree of the app. It is used to build the UI of the app.</p>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
@@ -275,20 +305,22 @@ exception types, and subclasses can override this method to provide custom excep
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.app.App.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.app.App.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor method</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.app.App.get_available_services">
 <span class="sig-name descname"><span class="pre">get_available_services</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.app.App.get_available_services" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of available services.</p>
+<dd><dl class="simple">
+<dt>Returns a list of available services. Each service contains details of its expected input and output.</dt><dd><p>As well as the service’s name, description, states, and the device it is running on.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A list of services that can be used by an App.
-With details of each service’s expected input and output.</p>
+<dd class="field-odd"><p>A list of service that can be used by an App.
+With details of each service.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list</p>
+<dd class="field-even"><p>list of dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -311,8 +343,12 @@ With details of each service’s expected input and output.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.app.App.setup">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.app.App.setup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract Method.
-Called during app initialization.
-Implement any required initialization and preparation steps here.</p>
+Called during app initialization. Implement any required initialization and preparation steps here.
+For example, if the app requires a camera, the camera should be initialized here. This makes it easier for
+the app to handle exceptions that might occur during initialization. It also makes it easier for 
+developers to implement the cleanup method to release resources. For example, the camera can be released
+in the cleanup method. This method is called only once during the app’s lifecycle. It is not recommanded 
+to perform any computationally intensive tasks in this method.</p>
 <dl class="simple">
 <dt>Raises:</dt><dd><p>NotImplementedError: If the method is not implemented in the subclass.</p>
 </dd>
@@ -323,8 +359,10 @@ Implement any required initialization and preparation steps here.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.app.App.process">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.app.App.process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract Method.
-Called repeatedly in every step of the app’s main event loop.
-Implement the app’s core logic here.</p>
+Called repeatedly in every step of the app’s main event loop. This method contains the app’s main logic.
+The number of times this method is called per second is bounded by the maxFPS setting within the app’s 
+manifest file. Since the method is called repeatedly, it is not recommended to perform any operations related 
+to resource acquisition or release in this method as it might cause performance issues.</p>
 <dl class="simple">
 <dt>Raises:</dt><dd><p>NotImplementedError: If the method is not implemented in the subclass.</p>
 </dd>
@@ -334,8 +372,9 @@ Implement the app’s core logic here.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.app.App.cleanup">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.app.App.cleanup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Abstract method for cleaning up the application and releasing resources. Subclasses must implement this
-method.</p>
+<dd><p>Abstract method for cleaning up the application and releasing resources. This method is called when the app is
+shutting down. Implement any necessary cleanup and resource-release steps here. For example, if the app
+requires a camera, the camera should be released here.</p>
 <dl class="simple">
 <dt>Raises:</dt><dd><p>NotImplementedError: If the method is not implemented in the subclass.</p>
 </dd>
@@ -346,7 +385,17 @@ method.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.app.App.on_exception">
 <span class="sig-name descname"><span class="pre">on_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exception</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.app.App.on_exception" title="Permalink to this definition">¶</a></dt>
 <dd><p>A method for handling exceptions in the application. This method can be overridden by subclasses to provide
-custom exception handling. The following exception types are supported:</p>
+custom exception handling. Below is a list of exception types that can be handled by this method. The most
+common exception types are ProcessError, NotSchedulable, and WidgetBuildFailed. The other exception types are
+related to the app’s lifecycle and are less common. ProcessError can occur when the app’s process method
+encounters an error. Developers should implement custom exception handling for this exception type as the
+app’s main logic is implemented in the process method. NotSchedulable can occur when a node is not schedulable
+during the start of a pipeline. Developers can decide to change the pipeline’s configuration so that the node
+is schedulable on a different device. WidgetBuildFailed can occur when the app’s UI widget fails to build. 
+This can happen when the app’s UI widget is not configured correctly. No matter what exception type is
+encountered, developers can decide if they want to continue running the app or stop it. It is recommended
+to log the exception and shut down the app if the exception is critical. If the app is stopped, the app’s
+cleanup method is called. Otherwise, the app’s process method is called again.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Exception Type</p></th>
@@ -506,7 +555,7 @@ There is no need to define the DataProducerMeta methods as any class
 as they are implicitly made available via .__subclasscheck__().</p>
 <p>Any class that inherits from this interface must define the following property and method:</p>
 <ul class="simple">
-<li><p>get_data(output_name, peer_name): method that obtain data from the data producer</p></li>
+<li><p>get_data(output_name, source_peer_name): method that obtain data from the data producer</p></li>
 <li><p>name: property that returns the name of the data producer</p></li>
 </ul>
 </dd></dl>
@@ -538,43 +587,14 @@ as they are implicitly made available via .__subclasscheck__().</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="cortic_platform.sdk.logging.log_to_file_func">
+<span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.logging.</span></span><span class="sig-name descname"><span class="pre">log_to_file_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.logging.log_to_file_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="cortic_platform.sdk.logging.log">
 <span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.logging.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">LogLevel.Info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.logging.log" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows developers to create logs that can be viewed in a Cortic AI Hub’s console widget.
-Logs created with this function will have an associated tag. There are three log levels:</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Log Levels</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>LogLevel.Info</p></td>
-<td><p>Informational message.</p></td>
-</tr>
-<tr class="row-odd"><td><p>LogLevel.Warning</p></td>
-<td><p>Warning message.</p></td>
-</tr>
-<tr class="row-even"><td><p>LogLevel.Error</p></td>
-<td><p>Error message.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>message</strong> (<em>str</em>) – String to log; may contain HTML color tags to display parts of the string
-in different colors in the Hub’s console widget.</p></li>
-<li><p><strong>log_level</strong> (<a class="reference internal" href="#cortic_platform.sdk.logging.LogLevel" title="cortic_platform.sdk.logging.LogLevel"><em>LogLevel</em></a>) – Log severity levels.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Example<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
-</dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Done &lt;p style=&#39;color:blue&#39;&gt;creating&lt;/p&gt; &lt;p style=&#39;color:red&#39;&gt;UI&lt;/p&gt; and &lt;p style=&#39;color:orange&#39;&gt;counters&lt;/p&gt; &lt;p style=&#39;color:green&#39;&gt;in&lt;/p&gt; setup&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
+<dd></dd></dl>
 
 </section>
 <section id="module-cortic_platform.sdk.pipeline">
@@ -604,8 +624,6 @@ to a Pipeline instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>service_handle</strong> (<em>str</em>) – The handle name of a specific service that developer needs to invoke.</p></li>
-<li><p><strong>device_name</strong> (<em>str</em>) – The device that the user wants the service from.</p></li>
 <li><p><strong>state</strong> (<a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineNodeState" title="cortic_platform.sdk.pipeline_states.PipelineNodeState"><em>PipelineNodeState</em></a>) – <p>The current state of the node. This is automatically updated by a Pipeline. The possible states are:</p>
 <ul>
 <li><p>PipelineNodeState.NotAssociated: The node is not associated with any service.</p></li>
@@ -614,8 +632,15 @@ to a Pipeline instance.</p>
 <li><p>PipelineNodeState.FailedToAssociate: The node failed to associate with a service.</p></li>
 </ul>
 </p></li>
-<li><p><strong>input_nodes</strong> (<em>list</em>) – A list of input nodes that are connected to this node.</p></li>
-<li><p><strong>output_nodes</strong> (<em>list</em>) – A list of output nodes that depend on the output data of this node.</p></li>
+<li><p><strong>device_name</strong> (<em>str</em>) – The name of the device that the node requests the service from. This is specified when the node is created. 
+If the device name is not specified, the node will request the service from any device that provides it.</p></li>
+<li><p><strong>associated_device</strong> (<em>dict</em>) – The device that the node is associated with. This is automatically updated by a Pipeline.</p></li>
+<li><p><strong>associated_service</strong> (<em>dict</em>) – The service that the node is associated with. This is automatically updated by a Pipeline.</p></li>
+<li><p><strong>associated_service_states</strong> (<em>dict</em>) – A dictionary of the states of the services associated with the node.</p></li>
+<li><p><strong>input_nodes</strong> (<em>dict</em>) – A dictionary of the input nodes of the node. The keys are the names of the input ports of the service associated with this node, 
+and the values are dictionaries of containing the names of input data and the nodes from which to receive it. The name of input ports and input data
+must match the names specified in the service’s implementation.</p></li>
+<li><p><strong>output_nodes</strong> (<em>list</em>) – A list of the output nodes of the node. The output nodes are the nodes that receive the output of the service associated with this node.</p></li>
 </ul>
 </dd>
 </dl>
@@ -717,10 +742,12 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the pipeline.</p></li>
-<li><p><strong>nodes</strong> (<em>list</em>) – A list of nodes (PipelineNode instances) in the pipeline.</p></li>
-<li><p><strong>input_ports</strong> (<em>dict</em>) – A dictionary mapping input port names to their corresponding input ports.</p></li>
-<li><p><strong>output_ports</strong> (<em>dict</em>) – A dictionary mapping output port names to their corresponding output ports. Each output port is associated with a PipelineNode.</p></li>
-<li><p><strong>state</strong> (<a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineState" title="cortic_platform.sdk.pipeline_states.PipelineState"><em>PipelineState</em></a>) – The current state of the pipeline (Stopped, Running, or FailedToStart).</p></li>
+<li><p><strong>nodes</strong> (<em>list</em>) – A list of PipelineNodes that are part of this pipeline.</p></li>
+<li><p><strong>input_ports</strong> (<em>dict</em>) – A dictionary of input ports. The keys are the names of the input ports,
+and the values are the data types of the input ports.</p></li>
+<li><p><strong>output_ports</strong> (<em>dict</em>) – A dictionary of output ports. The keys are the names of the output ports,
+and the values are the nodes that are associated with the output ports.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="#cortic_platform.sdk.pipeline_states.PipelineState" title="cortic_platform.sdk.pipeline_states.PipelineState"><em>PipelineState</em></a>) – The current state of the pipeline.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
@@ -756,8 +783,12 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.set_service_state">
-<span class="sig-name descname"><span class="pre">set_service_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_handle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.set_service_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the state of a service associated with this pipeline.</p>
+<span class="sig-name descname"><span class="pre">set_service_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_handle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.set_service_state" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Set the state of a service associated with this pipeline. If the service handle </dt><dd><p>is not representing a valid service or the service is not associated with this 
+pipeline, an error code is returned.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -765,8 +796,8 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 <li><p><strong>states</strong> (<em>dict</em>) – A dictionary mapping state names to their corresponding values.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the service handle is not associated with this pipeline.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -774,30 +805,35 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.get_service_state">
 <span class="sig-name descname"><span class="pre">get_service_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_handle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.get_service_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the state of a service associated with this pipeline.</p>
+<dd><dl class="simple">
+<dt>Get the state of a service associated with this pipeline. If the service handle is </dt><dd><p>not representing a valid service or the service is not associated with this 
+pipeline, a None is returned.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>service_handle</strong> (<em>str</em>) – The handle of the service.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the service handle is not associated with this pipeline.</p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dictionary mapping state names to their corresponding values.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary mapping state names to their corresponding values.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.reset_service_state">
-<span class="sig-name descname"><span class="pre">reset_service_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_handle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.reset_service_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reset the state of a service associated with this pipeline.</p>
+<dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.reset_service_states">
+<span class="sig-name descname"><span class="pre">reset_service_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_handle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.reset_service_states" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Reset the state of a service associated with this pipeline. If the service handle is</dt><dd><p>not representing a valid service or the service is not associated with this
+pipeline, an error code is returned.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>service_handle</strong> (<em>str</em>) – The handle of the service.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the service handle is not associated with this pipeline.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -805,13 +841,16 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.add_node">
 <span class="sig-name descname"><span class="pre">add_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.add_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a PipelineNode to the pipeline.</p>
+<dd><dl class="simple">
+<dt>Add a PipelineNode to the pipeline. If the node is already existing in the pipeline.</dt><dd><p>An error code is returned.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#cortic_platform.sdk.pipeline.PipelineNode" title="cortic_platform.sdk.pipeline.PipelineNode"><em>PipelineNode</em></a>) – The PipelineNode to add to the pipeline.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the node is already part of the pipeline.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -827,14 +866,14 @@ Each PipelineNode must be added to a Pipeline instance to be used in the data pr
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.remove_node">
 <span class="sig-name descname"><span class="pre">remove_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.remove_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove a PipelineNode from the pipeline.</p>
+<dd><p>Remove a PipelineNode from the pipeline. If the node is not in the pipeline. An error code is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#cortic_platform.sdk.pipeline.PipelineNode" title="cortic_platform.sdk.pipeline.PipelineNode"><em>PipelineNode</em></a>) – The PipelineNode to remove from the pipeline. If the node is associated with an output port,
 the output port of the Pipeline associated with this node will also be removed.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the node is not part of the pipeline.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -852,7 +891,8 @@ the output port of the Pipeline associated with this node will also be removed.<
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.add_input_port">
 <span class="sig-name descname"><span class="pre">add_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.add_input_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add an input port to the pipeline with a specified name. The input port can be used to send data
-to the pipeline. Any nodes in the pipeline can set their input to this input port.</p>
+to the pipeline. Any nodes in the pipeline can set their input source to this input port. If an input
+port with the same name already exists, or the data type is not valid, an error code is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -862,8 +902,8 @@ type of the data. The possible types are defined in the service_data_types modul
 <li><p><strong>name</strong> (<em>str</em>) – The name to be associated with the input port.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If an input port with the same name already exists.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -878,13 +918,14 @@ type of the data. The possible types are defined in the service_data_types modul
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.remove_input_port">
 <span class="sig-name descname"><span class="pre">remove_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.remove_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove an input port from the pipeline.</p>
+<dd><p>Remove an input port from the pipeline. If the input port does not exist in the pipeline.
+An error code is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the input port to remove.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the input port does not exist.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -924,7 +965,8 @@ type of the data. The possible types are defined in the service_data_types modul
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.add_output_port">
 <span class="sig-name descname"><span class="pre">add_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.add_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add an output port to the pipeline with a specified name and associate a PipelineNode to the output port.
-The PipelineNode must be already added to the pipeline before being set as an output.</p>
+The PipelineNode must be already added to the pipeline before being set as an output. If an output port
+with the same name already exists, or the node is not part of the pipeline, an error code is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -932,8 +974,8 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <li><p><strong>node</strong> (<a class="reference internal" href="#cortic_platform.sdk.pipeline.PipelineNode" title="cortic_platform.sdk.pipeline.PipelineNode"><em>PipelineNode</em></a>) – The node to be associated with the output port.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the node is not part of the pipeline or an output port with the same name already exists.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -950,13 +992,14 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.remove_output_port">
 <span class="sig-name descname"><span class="pre">remove_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.remove_output_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove an output port from the pipeline.</p>
+<dd><p>Remove an output port from the pipeline. If the output port does not exist in the pipeline.
+An error code is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the output port to remove.</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the output port does not exist.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -998,7 +1041,8 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.send_input_data">
 <span class="sig-name descname"><span class="pre">send_input_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_port_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.send_input_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send data to an input port in the pipeline.</p>
+<dd><p>Send data to an input port in the pipeline. The data must be of the same type as the input port’s data type.
+If the input port does not exist, or the data type does not match, an error code is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1006,14 +1050,8 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <li><p><strong>data</strong> (<em>Any</em>) – The data to be sent to the input port.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ValueError</strong> – If the input port name does not exist in the pipeline inputs.</p></li>
-<li><p><strong>ValueError</strong> – If the data is not a dictionary.</p></li>
-<li><p><strong>ValueError</strong> – If the input data is not a dictionary with string keys.</p></li>
-<li><p><strong>ValueError</strong> – If the input data contains keys that do not match the output data type of the input port.</p></li>
-<li><p><strong>ValueError</strong> – If the data type of the input data does not match the output data type of the input port.</p></li>
-</ul>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -1033,7 +1071,8 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.get_output_data">
 <span class="sig-name descname"><span class="pre">get_output_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_port_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.get_output_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the output data from an output port in the pipeline.</p>
+<dd><p>Get the output data from an output port in the pipeline. If the output port does not exist in the pipeline,
+or the pipeline is not running, a None is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>output_port_name</strong> (<em>str</em>) – The name of the output port.</p>
@@ -1042,13 +1081,10 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <dd class="field-even"><p>The output data from the output port.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
+<dd class="field-odd"><p>object or None</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the output port does not exist.</p>
-</dd>
-<dt class="field-odd">Example<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cortic_platform</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;example_pipeline&quot;</span><span class="p">)</span>
@@ -1064,7 +1100,8 @@ The PipelineNode must be already added to the pipeline before being set as an ou
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.get_all_output_data">
 <span class="sig-name descname"><span class="pre">get_all_output_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.get_all_output_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the output data from all output ports in the pipeline. The output data is returned as a dictionary
-with the output port name as the key and the output data as the value.</p>
+with the output port name as the key and the output data as the value. If the pipeline is not running,
+a None is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The output data from all output ports.</p>
@@ -1090,10 +1127,11 @@ with the output port name as the key and the output data as the value.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.start">
 <span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the pipeline by associating all nodes with their corresponding services and setting up
-their inputs accordingly.</p>
+their inputs accordingly. If the pipeline is already running, this will do nothing. If one or more
+PipelineNode failed to associate with their corresponding services, an error code is returned.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Exception</strong> – If the pipeline is already running.</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
@@ -1109,10 +1147,11 @@ their inputs accordingly.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.pipeline.Pipeline.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.pipeline.Pipeline.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the pipeline. This will notify the services that they are no longer needed by the pipeline.
-If a service is not needed by any other pipeline, it will be deactived.</p>
+If a service is not needed by any other pipeline, it will be deactived. If the pipeline is not running,
+An error code is returned.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Exception</strong> – If the pipeline is not running.</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A code indicating whether the operation was successful. If the operation was successful, the code is 0. Otherwise, the code is non-zero.</p>
 </dd>
 <dt class="field-even">Example<span class="colon">:</span></dt>
 <dd class="field-even"><p></p></dd>
@@ -1182,14 +1221,138 @@ If a service is not needed by any other pipeline, it will be deactived.</p>
 </section>
 <section id="module-cortic_platform.sdk.service">
 <span id="cortic-platform-sdk-service-module"></span><h2>cortic_platform.sdk.service module<a class="headerlink" href="#module-cortic_platform.sdk.service" title="Permalink to this heading">¶</a></h2>
-<p>This module provides a base class for creating various types of services that 
-can be used in a Cortic Platform App.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.service.</span></span><span class="sig-name descname"><span class="pre">ServiceStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceStatus.Deactivated">
+<span class="sig-name descname"><span class="pre">Deactivated</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#cortic_platform.sdk.service.ServiceStatus.Deactivated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceStatus.Activated">
+<span class="sig-name descname"><span class="pre">Activated</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#cortic_platform.sdk.service.ServiceStatus.Activated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceStatus.Idle">
+<span class="sig-name descname"><span class="pre">Idle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#cortic_platform.sdk.service.ServiceStatus.Idle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceStatus.Processing">
+<span class="sig-name descname"><span class="pre">Processing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#cortic_platform.sdk.service.ServiceStatus.Processing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceStatus.FailedToStart">
+<span class="sig-name descname"><span class="pre">FailedToStart</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#cortic_platform.sdk.service.ServiceStatus.FailedToStart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.service.</span></span><span class="sig-name descname"><span class="pre">ServiceContext</span></span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The ServiceContext class provides a set of methods that can be used by a Service to
+manage its states. The ServiceContext class is automatically instantiated when a
+Service object is created. The ServiceContext object is passed to the Service object</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>get_state: Retrieves the value of a state.</p></li>
+<li><p>set_state: Sets the value of a state.</p></li>
+<li><p>reset_states: Resets all states to their default values.</p></li>
+<li><dl class="simple">
+<dt>clear_states: Clears the entire state dictionary. Developers need to calle the create_state() method</dt><dd><p>to create new states after calling this method.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<p>A state is a variable that can be used by a Service to store information that is
+required by the Service to perform its task. For example, a Service may need to
+store the number of times it has processed data. In this case, the Service can
+create a state called “count” and increment its value each time it processes data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext.create_state">
+<span class="sig-name descname"><span class="pre">create_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_state_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext.create_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a state with a default value. If the state already exists, the default value
+is ignored and the existing value is used instead. If developers need to create more
+than one states, they should call this method multiple times. There is no method to
+create a batch of states as developers are expected to create states only when they
+are needed. This is to ensure that the state dictionary is not bloated with states
+that are not used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_name</strong> (<em>str</em>) – The name of the state.</p></li>
+<li><p><strong>state_value</strong> (<em>object</em>) – The value of the state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of a state. If the state does not exist, None is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state_name</strong> (<em>str</em>) – The name of the state.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the state name and value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext.set_state">
+<span class="sig-name descname"><span class="pre">set_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext.set_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of a state. If the state does not exist, an error code is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_name</strong> (<em>str</em>) – The name of the state.</p></li>
+<li><p><strong>state_value</strong> (<em>object</em>) – The value of the state.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating the result of the operation. 0 indicates success. A negative
+value indicates failure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext.reset_states">
+<span class="sig-name descname"><span class="pre">reset_states</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext.reset_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all states to their default values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.service.ServiceContext.clear_states">
+<span class="sig-name descname"><span class="pre">clear_states</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.ServiceContext.clear_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the entire state dictionary. Developers need to calle the create_state() method
+to create new states after calling this method.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_platform.sdk.service.Service">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.service.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><a class="headerlink" href="#cortic_platform.sdk.service.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Service class is a versatile foundation for developers to build custom services that can be
-used in a Cortic Platform App. To create a service, developers should
+used in a Cortic AIoT (Artificial Intelligence of Things) App. To create a service, developers should
 implement the following methods, which represent key stages in the service lifecycle:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -1212,7 +1375,21 @@ that genuinely need them.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.service.Service.activate">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.Service.activate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract Method.
-Allocates and acquires any resources required by this service.</p>
+Allocates and acquires any resources required by this service.  This method is executed
+when an App or another Service requires the output of this Service. Developers should
+implement this method to acquire any resources that are required by the process() method.
+The resources acquired in this method should be released in the deactivate() method. For
+example, if the process() method requires a neural network model, the activate() method
+should load the model from disk and store it in a variable. The deactivate() method should
+release the model by deleting the variable. This ensures that the model is loaded only when
+it is required and is released when it is no longer needed.</p>
+<p>Another thing developers should do in this method is to setup the context of this service.
+The context is a dictionary that can be used to store state information that is required by the
+service to perform its task. For example, a service may need to store the number of times
+it has processed data. In this case, the service can create a state called “count” and
+increment its value each time it processes data. However, the context is reset each time
+the service is deactivated and activated again. Therefore, if the service needs to maintain
+a state, it should create the state in the init() method instead.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p>NotImplementedError: If this method is not implemented.</p>
@@ -1224,7 +1401,15 @@ Allocates and acquires any resources required by this service.</p>
 <dt class="sig sig-object py" id="cortic_platform.sdk.service.Service.process">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.Service.process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract Method.
-Processes the input data and produces an output.</p>
+Processes the input data and produces an output. This method is executed when new data
+arrives from an App or another Service. There isn’t a fixed number of calls per second
+for this method. The number of calls per second depends on the rate at which data is
+produced by the App or Service that is connected to this Service. Developers should
+implement this method to process the input data and produce an output. The output of
+this method is returned to the App or Service that is connected to this Service. It is
+not recommended to perform any resource allocation in this method. All resources should
+be allocated in the activate() method. This method should only contain the data processing
+logic.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>input_data</strong> (<em>dict</em>) – Contains the data that needs to be processed by this Service.
@@ -1248,7 +1433,9 @@ is the name of the data, and &lt;value&gt; is the value of this data.</p>
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deactivate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.service.Service.deactivate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract Method.
 Releases any resources being allocated and obtained by this Service in
-the activate() method.</p>
+the activate() method. This method is executed when an App or another Service no longer
+requires the output of this Service. Developers should implement this method to release
+any resources that are no longer required.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p>NotImplementedError: If this method is not implemented.</p>
@@ -1261,15 +1448,23 @@ the activate() method.</p>
 </section>
 <section id="module-cortic_platform.sdk.streaming_peer">
 <span id="cortic-platform-sdk-streaming-peer-module"></span><h2>cortic_platform.sdk.streaming_peer module<a class="headerlink" href="#module-cortic_platform.sdk.streaming_peer" title="Permalink to this heading">¶</a></h2>
-<p>This module contains classes for managing peer-to-peer streaming connections between Cortic Apps
-using WebRTC (Web Real-Time Communication) technology.</p>
-<p>Main components of the streaming_peer module:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>StreamingPeerConnection</p></li>
-<li><p>StreamingPeer</p></li>
-</ul>
-</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.ConnectionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.streaming_peer.</span></span><span class="sig-name descname"><span class="pre">ConnectionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.ConnectionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.ConnectionType.Incoming">
+<span class="sig-name descname"><span class="pre">Incoming</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.ConnectionType.Incoming" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.ConnectionType.Outgoing">
+<span class="sig-name descname"><span class="pre">Outgoing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.ConnectionType.Outgoing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeerConnection">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.streaming_peer.</span></span><span class="sig-name descname"><span class="pre">StreamingPeerConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeerConnection" title="Permalink to this definition">¶</a></dt>
@@ -1295,7 +1490,7 @@ Developer should not use this class directly.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.streaming_peer.</span></span><span class="sig-name descname"><span class="pre">StreamingPeer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_connection_request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_connected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_connection_failed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_disconnected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.streaming_peer.</span></span><span class="sig-name descname"><span class="pre">StreamingPeer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incoming_connection_handler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The StreamingPeer class facilitates streaming data between different Cortic Apps. It can both send and receive
 data streams for further processing or visualization. This class leverages WebRTC (Web Real-Time Communication) to
@@ -1313,7 +1508,7 @@ any mouse and keyboard events generated by users interacting with the stream.</p
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_connection_request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_connected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_connection_failed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_disconnected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incoming_connection_handler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initializes a StreamingPeer with necessary callbacks.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1386,63 +1581,58 @@ is necessary, return an empty dictionary.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Disconnected from peer </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">peer_name</span><span class="p">))</span>
 
 <span class="n">peer</span> <span class="o">=</span> <span class="n">StreamingPeer</span><span class="p">(</span><span class="s2">&quot;peer1&quot;</span><span class="p">,</span>
-                    <span class="n">on_connection_request</span><span class="p">,</span>
-                    <span class="n">on_connected</span><span class="p">,</span>
-                    <span class="n">on_connection_failed</span><span class="p">,</span>
-                    <span class="n">on_disconnected</span><span class="p">)</span>
+                    <span class="n">on_connection_request</span><span class="p">)</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">connection_success_handler</span> <span class="o">=</span> <span class="n">on_connected</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">connection_failed_handler</span> <span class="o">=</span> <span class="n">on_connection_failed</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">connection_closed_handler</span> <span class="o">=</span> <span class="n">on_disconnected</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.make_connection_request">
-<span class="sig-name descname"><span class="pre">make_connection_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.make_connection_request" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.create_outgoing_connection">
+<span class="sig-name descname"><span class="pre">create_outgoing_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_peer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.create_outgoing_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initiates a connection request to another peer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_peer_name</strong> – The name of the peer to establish a connection with. If the peer already exists, an error code will be returned.</p>
+</dd>
+</dl>
+<p>:type target_peer_name str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>peer_name</strong> (<em>str</em>) – The name of the peer to establish a connection with.</p></li>
 <li><p><strong>video_sources</strong> (<em>list</em>) – <p>A list of tuples specifying the data sources for video tracks to be sent to another peer. Each tuple contains three elements:</p>
-<blockquote>
-<div><ol class="arabic simple">
+<ol class="arabic simple">
 <li><p>an instance of a Python class implementing the get_data method from the DataProducer interface,</p></li>
 <li><p>a list of strings representing the output names of the DataProducer, and</p></li>
 <li><p>an optional string containing the name of a peer.</p></li>
 </ol>
-</div></blockquote>
 <p>When the third element is provided, only data produced by the input data from the specified
 peer is used in a video track.</p>
 </p></li>
 <li><p><strong>audio_sources</strong> (<em>list</em>) – <p>A list of tuples specifying the data sources for audio tracks to be sent to another peer. Each tuple contains three elements:</p>
-<blockquote>
-<div><ol class="arabic simple">
+<ol class="arabic simple">
 <li><p>an instance of a Python class implementing the get_data method from the DataProducer interface,</p></li>
 <li><p>a list of strings representing the output names of the DataProducer, and</p></li>
 <li><p>an optional string containing the name of a peer.</p></li>
 </ol>
-</div></blockquote>
 <p>When the third element is provided, only data produced by the input data from the specified
 peer is used in a audio track.</p>
 </p></li>
 <li><p><strong>data_sources</strong> (<em>list</em>) – <p>A list of tuples specifying the data sources to send to datachannels of another peer. Each tuple contains three elements:</p>
-<blockquote>
-<div><ol class="arabic simple">
+<ol class="arabic simple">
 <li><p>an instance of a Python class implementing the get_data method from the DataProducer interface,</p></li>
 <li><p>a list of strings representing the output names of the DataProducer, and</p></li>
 <li><p>an optional string containing the name of a peer.</p></li>
 </ol>
-</div></blockquote>
 <p>When the third element is provided, only data produced by the input data from the specified
 peer is used in a datachannel.</p>
 </p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ValueError</strong> – If a connection with the peer already exists.</p></li>
-<li><p><strong>TypeError</strong> – If the tuple in video_sources, audio_sources, or data_sources does not contain proper elements. i.e. the first element is not a DataProducer, the second element is not a list of strings, or the third element is not a string.</p></li>
-<li><p><strong>ValueError</strong> – If the output names in the tuple in video_sources, audio_sources, or data_sources do not exist in the DataProducer.</p></li>
-</ul>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating the result of the connection request. 0 indicates success, and a negative value indicates failure.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -1470,7 +1660,7 @@ peer is used in a datachannel.</p>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">set_output</span><span class="p">(</span><span class="s2">&quot;output_1&quot;</span><span class="p">,</span> <span class="n">output_node</span><span class="p">)</span>
 <span class="n">pipeline</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 <span class="n">video_producer</span> <span class="o">=</span> <span class="n">VideoProducer</span><span class="p">()</span>
-<span class="n">peer</span><span class="o">.</span><span class="n">make_connection_request</span><span class="p">(</span><span class="s2">&quot;peer2&quot;</span><span class="p">,</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">create_outgoing_connection</span><span class="p">(</span><span class="s2">&quot;peer2&quot;</span><span class="p">,</span>
                              <span class="n">video_sources</span><span class="o">=</span><span class="p">[(</span><span class="n">video_producer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;video_output&quot;</span><span class="p">])],</span>
                              <span class="n">audio_sources</span><span class="o">=</span><span class="p">[(</span><span class="n">pipeline</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;output_1&quot;</span><span class="p">])],</span>
 </pre></div>
@@ -1484,15 +1674,12 @@ peer is used in a datachannel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>peer_name</strong> (<em>str</em>) – The name of the peer to terminate the connection with.</p></li>
-<li><p><strong>connection_type</strong> (<a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType" title="cortic_platform.sdk.streaming_states.ConnectionType"><em>ConnectionType</em></a>) – The type of the connection to terminate.</p></li>
+<li><p><strong>peer_name</strong> (<em>str</em>) – The name of the peer to terminate the connection with. If the peer does not exist, an error code will be returned.</p></li>
+<li><p><strong>connection_type</strong> (<a class="reference internal" href="#cortic_platform.sdk.streaming_peer.ConnectionType" title="cortic_platform.sdk.streaming_peer.ConnectionType"><em>ConnectionType</em></a>) – The type of the connection to terminate.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ValueError</strong> – If the peer name is not found.</p></li>
-<li><p><strong>ValueError</strong> – If the connection type is not valid.</p></li>
-</ul>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A code indicating the result of the connection termination. 0 indicates success, and a negative value indicates failure.</p>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -1511,8 +1698,8 @@ peer is used in a datachannel.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.accept_connection_requests">
-<span class="sig-name descname"><span class="pre">accept_connection_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.accept_connection_requests" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.accept_incoming_connections">
+<span class="sig-name descname"><span class="pre">accept_incoming_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.accept_incoming_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts accepting connection requests from other StreamingPeers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1525,14 +1712,14 @@ peer is used in a datachannel.</p>
     <span class="k">return</span> <span class="p">{}</span>
 
 <span class="n">peer</span> <span class="o">=</span> <span class="n">StreamingPeer</span><span class="p">(</span><span class="s2">&quot;peer1&quot;</span><span class="p">,</span> <span class="n">on_connection_request</span><span class="p">)</span>
-<span class="n">peer</span><span class="o">.</span><span class="n">accept_connection_requests</span><span class="p">()</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">accept_incoming_connections</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_connection_requests">
-<span class="sig-name descname"><span class="pre">refuse_connection_requests</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_connection_requests" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_incoming_connections">
+<span class="sig-name descname"><span class="pre">refuse_incoming_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_incoming_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops accepting connection requests from other StreamingPeers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -1545,25 +1732,15 @@ peer is used in a datachannel.</p>
     <span class="k">return</span> <span class="p">{}</span>
 
 <span class="n">peer</span> <span class="o">=</span> <span class="n">StreamingPeer</span><span class="p">(</span><span class="s2">&quot;peer1&quot;</span><span class="p">,</span> <span class="n">on_connection_request</span><span class="p">)</span>
-<span class="n">peer</span><span class="o">.</span><span class="n">accept_connection_requests</span><span class="p">()</span>
-<span class="n">peer</span><span class="o">.</span><span class="n">refuse_connection_requests</span><span class="p">()</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">accept_incoming_connections</span><span class="p">()</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">refuse_incoming_connections</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.categorize_track_routing_rules">
-<span class="sig-name descname"><span class="pre">categorize_track_routing_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">track_routing_rules</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.categorize_track_routing_rules" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.parse_ice_func">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_ice_func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.parse_ice_func" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.reset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.reset_all_connections">
+<span class="sig-name descname"><span class="pre">reset_all_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.reset_all_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the StreamingPeer by removing all connections and resetting its state.
 This function disconnects all sending and receiving connections, clears the
 connections lists, and sets the StreamingPeer state to its initial state.</p>
@@ -1578,34 +1755,22 @@ connections lists, and sets the StreamingPeer state to its initial state.</p>
     <span class="k">return</span> <span class="p">{}</span>
 
 <span class="n">peer</span> <span class="o">=</span> <span class="n">StreamingPeer</span><span class="p">(</span><span class="s2">&quot;peer1&quot;</span><span class="p">,</span> <span class="n">on_connection_request</span><span class="p">)</span>
-<span class="n">peer</span><span class="o">.</span><span class="n">accept_connection_requests</span><span class="p">()</span>
-<span class="n">peer</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">accept_incoming_connections</span><span class="p">()</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">reset_all_connections</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_peer.StreamingPeer.parse_ice_func">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_ice_func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.parse_ice_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="module-cortic_platform.sdk.streaming_states">
 <span id="cortic-platform-sdk-streaming-states-module"></span><h2>cortic_platform.sdk.streaming_states module<a class="headerlink" href="#module-cortic_platform.sdk.streaming_states" title="Permalink to this heading">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_states.ConnectionType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.streaming_states.</span></span><span class="sig-name descname"><span class="pre">ConnectionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_states.ConnectionType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
-<p>An enumeration.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_states.ConnectionType.Incoming">
-<span class="sig-name descname"><span class="pre">Incoming</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#cortic_platform.sdk.streaming_states.ConnectionType.Incoming" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="cortic_platform.sdk.streaming_states.ConnectionType.Outgoing">
-<span class="sig-name descname"><span class="pre">Outgoing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#cortic_platform.sdk.streaming_states.ConnectionType.Outgoing" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <dl class="py class">
 <dt class="sig sig-object py" id="cortic_platform.sdk.streaming_states.StreamingPeerState">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.streaming_states.</span></span><span class="sig-name descname"><span class="pre">StreamingPeerState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.streaming_states.StreamingPeerState" title="Permalink to this definition">¶</a></dt>
@@ -1741,6 +1906,7 @@ connections lists, and sets the StreamingPeer state to its initial state.</p>
 <li><a class="reference internal" href="#cortic_platform.sdk.logging.LogLevel.Error"><code class="docutils literal notranslate"><span class="pre">LogLevel.Error</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#cortic_platform.sdk.logging.log_to_file_func"><code class="docutils literal notranslate"><span class="pre">log_to_file_func()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.logging.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
 </ul>
 </li>
@@ -1754,7 +1920,7 @@ connections lists, and sets the StreamingPeer state to its initial state.</p>
 <li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.__init__"><code class="docutils literal notranslate"><span class="pre">Pipeline.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.set_service_state"><code class="docutils literal notranslate"><span class="pre">Pipeline.set_service_state()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.get_service_state"><code class="docutils literal notranslate"><span class="pre">Pipeline.get_service_state()</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.reset_service_state"><code class="docutils literal notranslate"><span class="pre">Pipeline.reset_service_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.reset_service_states"><code class="docutils literal notranslate"><span class="pre">Pipeline.reset_service_states()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.add_node"><code class="docutils literal notranslate"><span class="pre">Pipeline.add_node()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.remove_node"><code class="docutils literal notranslate"><span class="pre">Pipeline.remove_node()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.pipeline.Pipeline.add_input_port"><code class="docutils literal notranslate"><span class="pre">Pipeline.add_input_port()</span></code></a></li>
@@ -1789,6 +1955,23 @@ connections lists, and sets the StreamingPeer state to its initial state.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-cortic_platform.sdk.service">cortic_platform.sdk.service module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceStatus"><code class="docutils literal notranslate"><span class="pre">ServiceStatus</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceStatus.Deactivated"><code class="docutils literal notranslate"><span class="pre">ServiceStatus.Deactivated</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceStatus.Activated"><code class="docutils literal notranslate"><span class="pre">ServiceStatus.Activated</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceStatus.Idle"><code class="docutils literal notranslate"><span class="pre">ServiceStatus.Idle</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceStatus.Processing"><code class="docutils literal notranslate"><span class="pre">ServiceStatus.Processing</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceStatus.FailedToStart"><code class="docutils literal notranslate"><span class="pre">ServiceStatus.FailedToStart</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext"><code class="docutils literal notranslate"><span class="pre">ServiceContext</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext.__init__"><code class="docutils literal notranslate"><span class="pre">ServiceContext.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext.create_state"><code class="docutils literal notranslate"><span class="pre">ServiceContext.create_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext.get_state"><code class="docutils literal notranslate"><span class="pre">ServiceContext.get_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext.set_state"><code class="docutils literal notranslate"><span class="pre">ServiceContext.set_state()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext.reset_states"><code class="docutils literal notranslate"><span class="pre">ServiceContext.reset_states()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.service.ServiceContext.clear_states"><code class="docutils literal notranslate"><span class="pre">ServiceContext.clear_states()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#cortic_platform.sdk.service.Service"><code class="docutils literal notranslate"><span class="pre">Service</span></code></a><ul>
 <li><a class="reference internal" href="#cortic_platform.sdk.service.Service.__init__"><code class="docutils literal notranslate"><span class="pre">Service.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.service.Service.activate"><code class="docutils literal notranslate"><span class="pre">Service.activate()</span></code></a></li>
@@ -1799,29 +1982,28 @@ connections lists, and sets the StreamingPeer state to its initial state.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-cortic_platform.sdk.streaming_peer">cortic_platform.sdk.streaming_peer module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.ConnectionType"><code class="docutils literal notranslate"><span class="pre">ConnectionType</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.ConnectionType.Incoming"><code class="docutils literal notranslate"><span class="pre">ConnectionType.Incoming</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.ConnectionType.Outgoing"><code class="docutils literal notranslate"><span class="pre">ConnectionType.Outgoing</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeerConnection"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnection</span></code></a><ul>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeerConnection.__init__"><code class="docutils literal notranslate"><span class="pre">StreamingPeerConnection.__init__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer"><code class="docutils literal notranslate"><span class="pre">StreamingPeer</span></code></a><ul>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.__init__"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.make_connection_request"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.make_connection_request()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.create_outgoing_connection"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.create_outgoing_connection()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.terminate_connection"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.terminate_connection()</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.accept_connection_requests"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.accept_connection_requests()</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_connection_requests"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.refuse_connection_requests()</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.categorize_track_routing_rules"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.categorize_track_routing_rules()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.accept_incoming_connections"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.accept_incoming_connections()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.refuse_incoming_connections"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.refuse_incoming_connections()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.reset_all_connections"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.reset_all_connections()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.parse_ice_func"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.parse_ice_func()</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_peer.StreamingPeer.reset"><code class="docutils literal notranslate"><span class="pre">StreamingPeer.reset()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-cortic_platform.sdk.streaming_states">cortic_platform.sdk.streaming_states module</a><ul>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType"><code class="docutils literal notranslate"><span class="pre">ConnectionType</span></code></a><ul>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType.Incoming"><code class="docutils literal notranslate"><span class="pre">ConnectionType.Incoming</span></code></a></li>
-<li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.ConnectionType.Outgoing"><code class="docutils literal notranslate"><span class="pre">ConnectionType.Outgoing</span></code></a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState</span></code></a><ul>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState.AwaitIncomingConnection"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState.AwaitIncomingConnection</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.streaming_states.StreamingPeerState.RefuseIncomingConnection"><code class="docutils literal notranslate"><span class="pre">StreamingPeerState.RefuseIncomingConnection</span></code></a></li>
