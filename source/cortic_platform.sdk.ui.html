@@ -65,7 +65,13 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 of the screen.</p>
 </dd>
 <dt class="field-even">Variables<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>alignment</strong> (<em>str</em>) – Determines the alignment of the widgets in this Container.</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>alignment</strong> (<em>str</em>) – Determines the alignment of the widgets in this Container.</p></li>
+<li><p><strong>child_fitting_mode</strong> (<em>str</em>) – Determines how the widgets in this Container are fitted. This is useful
+when the widgets in this Container are larger than the Container itself. The options are “fit”
+and “full_size”. “fit” means the widgets will be scaled down to fit the Container, while “full_size”
+means the widgets will be displayed in their original size, and the Container will be scrollable.</p></li>
+</ul>
 </dd>
 <dt class="field-odd">Example<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -1383,6 +1389,7 @@ a widget with a width of 100 and a height of 100, and starting at the top left c
 of the screen.</p></li>
 <li><p><strong>state</strong> (<a class="reference internal" href="#cortic_platform.sdk.ui.widget.WidgetState" title="cortic_platform.sdk.ui.widget.WidgetState"><em>WidgetState</em></a>) – The state of the widget.</p></li>
 <li><p><strong>alpha</strong> (<em>int</em>) – Transparency of this widget.</p></li>
+<li><p><strong>tooltip</strong> (<em>str</em>) – The tooltip of the widget.</p></li>
 <li><p><strong>corner_radius</strong> (<em>int</em>) – The radius of the widget’s corners.</p></li>
 <li><p><strong>use_custom_corner_radius</strong> (<em>bool</em>) – Controls whether the widget uses custom radius for its corners.</p></li>
 <li><p><strong>custom_corner_radius</strong> (<em>list</em>) – The custom radius of the widget’s corners. The list should have 4 elements, each element represents the radius of a corner. The order is [top_left, top_right, bottom_left, bottom_right].</p></li>
