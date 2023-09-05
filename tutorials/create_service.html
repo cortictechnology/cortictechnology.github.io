@@ -392,6 +392,31 @@
     <p> Complete code for this service can be found <a
             href="https://github.com/cortictechnology/cortic-platform-samples/tree/main/services/face_detector_multiplatform"
             target="_blank">here</a>.</p>
+
+    <h3>4. Platform Dependent Packages</h3>
+
+    <p>For this example, let's assume that we want to make sure only a specific version of CUDA toolkit is installed on
+        Linux after the
+        conda environment is created. To do this, we will need to edit the
+        <code>post_conda_env_creation.py</code> script to call the <code>conda install</code> command to install the
+        required version of CUDA toolkit. The <code>post_conda_env_creation.py</code> script is automatically created
+        when you create a new service. You should perform the detection of the current platform within this script
+        before installing the relevant packages. The code for this example is shown below:
+    </p>
+
+    <pre><code class="language-python">
+        # post_conda_env_creation.py
+
+        import platform
+        import subprocess
+
+        if platform.system() == "Linux":
+            subprocess.run(["conda", "install", "-c", "anaconda", "cudatoolkit=11.0"])
+    </code></pre>
+
+    <p> This will ensure that the CUDA toolkit version 11.0 is installed on Linux after the conda environment is
+        created.</p>
+
     <h2>Next Steps</h2>
     <p>Now that you have successfully created a service:</p>
     <ul>
