@@ -1343,6 +1343,37 @@ Default is an empty list.</p></li>
 </dd></dl>
 
 </section>
+<section id="module-cortic_platform.sdk.ui.widget_group">
+<span id="cortic-platform-sdk-ui-widget-group-module"></span><h2>cortic_platform.sdk.ui.widget_group module<a class="headerlink" href="#module-cortic_platform.sdk.ui.widget_group" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="cortic_platform.sdk.ui.widget_group.WidgetGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cortic_platform.sdk.ui.widget_group.</span></span><span class="sig-name descname"><span class="pre">WidgetGroup</span></span><a class="headerlink" href="#cortic_platform.sdk.ui.widget_group.WidgetGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The WidgetGroup class is an abstract class that developers can extend to create custom widget groups that can
+be used in any Cortic App or visualized in the UI Layout Tool. A WidgetGroup is a collection of widgets that
+are grouped together into a root Container Widget. Developers can add any number of widgets to the root
+Container Widget. The WidgetGroup class has a create method that can be executed to obtain the root Container.</p>
+<p>Developers need to implement the following methods:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>create: This method is executed either by the UI Layout Tool or by developers to obtain the root Container Widget of the WidgetGroup.</dt><dd><p>The returned Container Widget can be added to the WidgetTree of an App.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.ui.widget_group.WidgetGroup.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.ui.widget_group.WidgetGroup.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cortic_platform.sdk.ui.widget_group.WidgetGroup.create">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cortic_platform.sdk.ui.widget_group.WidgetGroup.create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-cortic_platform.sdk.ui.widget">
 <span id="cortic-platform-sdk-ui-widget-module"></span><h2>cortic_platform.sdk.ui.widget module<a class="headerlink" href="#module-cortic_platform.sdk.ui.widget" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -2076,6 +2107,14 @@ updated.</p>
 <li><a class="reference internal" href="#cortic_platform.sdk.ui.viewer_widgets.StreamingView"><code class="docutils literal notranslate"><span class="pre">StreamingView</span></code></a><ul>
 <li><a class="reference internal" href="#cortic_platform.sdk.ui.viewer_widgets.StreamingView.__init__"><code class="docutils literal notranslate"><span class="pre">StreamingView.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#cortic_platform.sdk.ui.viewer_widgets.StreamingView.update_data"><code class="docutils literal notranslate"><span class="pre">StreamingView.update_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-cortic_platform.sdk.ui.widget_group">cortic_platform.sdk.ui.widget_group module</a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.ui.widget_group.WidgetGroup"><code class="docutils literal notranslate"><span class="pre">WidgetGroup</span></code></a><ul>
+<li><a class="reference internal" href="#cortic_platform.sdk.ui.widget_group.WidgetGroup.__init__"><code class="docutils literal notranslate"><span class="pre">WidgetGroup.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#cortic_platform.sdk.ui.widget_group.WidgetGroup.create"><code class="docutils literal notranslate"><span class="pre">WidgetGroup.create()</span></code></a></li>
 </ul>
 </li>
 </ul>
