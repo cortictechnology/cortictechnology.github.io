@@ -44,13 +44,6 @@ cortic\_platform.sdk.ui.viewer\_widgets module
    :undoc-members:
    :show-inheritance:
 
-cortic\_platform.sdk.ui.widget\_group module
---------------------------------------------
-
-.. automodule:: cortic_platform.sdk.ui.widget_group
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 cortic\_platform.sdk.ui.widget module
 -------------------------------------
