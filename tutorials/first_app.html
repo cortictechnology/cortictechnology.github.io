@@ -93,56 +93,55 @@
         from cortic_platform.sdk.app_events import ExceptionTypes # Import the ExceptionTypes enum
         from cortic_platform.sdk.logging import log, LogLevel # Import the log function and LogLevel enum
         from service_registry import *
-        
+
         # Uncomment the following lines to enable debugpy so that you can attach a debugger to the app
         # in VSCode. A vscode configuration is already provided in the .vscode folder. You will need to
         # make sure the port in the vscode configuration is the same as the one specified in the
         # debugpy.listen() call.
-        
+
         # import debugpy
         # debugpy.listen(("0.0.0.0", 5678))
-        
+
         APP_WIDTH=1280 # Specify the width of the app
         APP_HEIGHT=720 # Specify the height of the app
-        
+
         # Create a new app class that inherits from the App class
         class MyFirstApp(App):
             def __init__(self):
                 super().__init__()
-        
+
 
             def setup(self):
                 self.background_container = Container([0, 0, APP_WIDTH, APP_HEIGHT])
                 self.background_container.background = "#181923"
-        
+
                 self.video_frame = Image(
-                    [APP_WIDTH * 0.3 / 2, APP_HEIGHT * 0.3 / 2, APP_WIDTH * 0.7, APP_HEIGHT * 0.7],
-                    scaling_method="fit",
-                )
-        
-                self.background_container.children.append(self.video_frame)
+                    [APP_WIDTH * 0.3 / 2, APP_HEIGHT * 0.3 / 2, APP_WIDTH * 0.7, APP_HEIGHT * 0.7])
+
+                self.background_container.add_child(self.video_frame)
                 
-                self.widget_tree.add(self.background_container)
+                self.widget_tree.add_child(self.background_container)
                 self.widget_tree.build()
-        
+
 
             def process(self):
+                # Change the video_file path to a file on your local machine
                 frame_data = video_capture({"grey_scale": False}, 
-                                           service_states={"video_file": "/Users/michael/Downloads/video.mov"})
+                                            service_states={"video_file": "/Users/michael/Downloads/video.mp4"})
                 task_data = None
                 if frame_data is not None:
-                    face_detection_data = face_landmarks({"camera_input": frame_data,
-                                                          "draw_landmarks": True})
-                    if face_detection_data is not None:
-                        task_data = face_detection_data.get_data()
+                    face_landmarks_data = face_landmarks({"camera_input": frame_data, 
+                                                        "draw_landmarks": True})
+                    if face_landmarks_data is not None:
+                        task_data = face_landmarks_data.get_data()
                 if task_data and task_data is not ExceptionTypes:
-                    self.video_frame.update_image(task_data["frame"])
+                    self.video_frame.set_data(task_data["frame"])
                 self.widget_tree.update()
-        
+
                 
             def on_exception(self, exception, exception_data=None):
                 log("Exception occurred: " + str(exception_data), log_level=LogLevel.Error)
-        
+
 
             def teardown(self):
                 log("Tearing down the App", log_level=LogLevel.Info)
