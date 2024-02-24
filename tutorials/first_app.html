@@ -127,12 +127,12 @@
             def process(self):
                 # Change the video_file path to a file on your local machine
                 frame_data = video_capture({"grey_scale": False}, 
-                                            service_states={"video_file": "/Users/michael/Downloads/video.mp4"})
+                                            service_states={"video_file": "/Users/michael/Downloads/myself2 (2).mp4"})
                 task_data = None
                 if frame_data is not None:
                     face_landmarks_data = face_landmarks({"camera_input": frame_data, 
                                                         "draw_landmarks": True})
-                    if face_landmarks_data is not None:
+                    if face_landmarks_data is not None and not isinstance(face_landmarks_data, ExceptionTypes):
                         task_data = face_landmarks_data.get_data()
                 if task_data and task_data is not ExceptionTypes:
                     self.video_frame.set_data(task_data["frame"])
